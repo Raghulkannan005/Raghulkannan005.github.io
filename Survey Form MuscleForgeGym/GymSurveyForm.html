@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="GSF.css">
+</head>
+<body>
+    <div class="bgdark"></div>
+    <div class="container">
+        <div class="backdrop"></div>
+        <h1 id="title">Muscle Forge</h1>
+        <p id="description">Thank you for Showing up!</p>
+        <hr>
+        <form id="survey-form">
+            <div class="personal">
+                <div class="personal-inputs">
+                    <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your Name:" required>
+                </div>
+                <div class="personal-inputs">
+                    <label id="email-label" for=""email>Email</label>
+                <input type="email" id="email" placeholder="Enter your Email:" required>
+                </div>
+                <div class="personal-inputs">
+                    <label id="number-label" for="number">Age</label>
+                <input type="number" id="number" placeholder="Age:" min="16" max="99">
+                </div>
+            </div>
+            <div class="dropdown">
+                <label class=".dphead">What is your favorite thing about our GYM?
+                <select name="favorite" id="dropdown">
+                    <option>Please Select an Option:</option>
+                    <option>Cleanliness</option>
+                    <option>Quality Equipments</option>
+                    <option>Trainers</option>
+                    <option>Membership Fee</option>
+                </select>
+            </label>
+            </div>
+            <div class="radio">
+                <legend> Would you refer our Gym to your Friend?</legend>
+                    <label for="definitely"><input type="radio" value="definitely" name="recommend" id="definitely">Definitely</label>
+                    <label for="Maybe"><input type="radio" value="maybe" name="recommend" id="Maybe">Maybe</label>
+                    <label for="Not Sure"><input type="radio" value="notsure" name="recommend" id="Not Sure">Not Sure</label>
+            </div>
+            <div class="check">
+                    <legend> What are the Plans you are Enrolled?</legend>
+                        <label for="enroll-Strength"><input type="checkbox" value="strength" name="enroll" id="enroll-strength">Strength Training</label>
+                        <label for="enroll-Cardio"><input type="checkbox" name="enroll" id="enroll-Cardio" value="cardio">Cardio Training</label>
+                        <label for="enroll-Zumba"><input type="checkbox" name="enroll" id="enroll-Zumba" value="zumba">Zumba</label>
+                        <label for="enroll-Calisthenics"><input type="checkbox" name="enroll" id="enroll-Calisthenics" value="calisthenics">Calisthenics</label>
+            </div>
+            <textarea placeholder="Your Comments here:"></textarea>
+            <div class="btn">
+                <button type="submit" id="submit">SUBMIT</button>
+            </div>
+        </form>
+       </div>
+</body>
+</html>
