@@ -3,6 +3,9 @@ body{
     line-height: 1.5;
     color: #4D4e53;
 }
+html{
+    scroll-behavior: smooth;
+}
 :root{
     --pyyel : #ffde57;
     --pybl: #4584b6;
