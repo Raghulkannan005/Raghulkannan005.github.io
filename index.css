@@ -1,0 +1,301 @@
+:root{
+    --dark-blue: #0c2636;
+    --lightdark-blue: #5fa8d3;
+    --medium-blue: #62b6cb;
+    --light-blue: #cae9ff;
+    --pale-yellow: #ecf39e;
+    --crimson: #B80f0A;
+}
+body{
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-blue);
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+#name{
+   -webkit-animation: colorChange 10s infinite;
+    animation: colorChange 10s infinite;
+}
+#navbar{
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+#navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1rem;
+    padding: 1rem;
+    list-style-type: none;
+    margin: 0;
+    width: 25%;
+}
+@media screen and (max-width: 425px){
+    #navigation{
+        font-size: 0.2rem;
+        min-width: none;
+        flex-direction:column ;
+        font-size: 0.5rem;
+}
+    #welcome-section{
+        font-size: 0.8rem;
+        max-width: 100vw;
+       text-align: center;
+}
+#navbar{
+    height: 10vh;
+    padding: 1.5rem;
+}
+}
+
+
+@media screen and (min-width: 426px){
+    #navigation{
+        min-width: 425px;
+    }
+}
+#navigation li a{
+    color: var(--light-blue);
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+}
+#navigation li a:hover{
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    padding: 0.5rem;
+    -webkit-transition: background-color 0.5s ease, font-size 0.5s ease;
+    -moz-transition: background-color 0.5s ease, font-size 0.5s ease;
+    -ms-transition: background-color 0.5s ease, font-size 0.5s ease;
+    -o-transition: background-color 0.5s ease, font-size 0.5s ease;
+    transition: background-color 0.5s ease, font-size 0.5s ease;
+}
+#welcome-section{
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#welcome-section h1{
+    font-size: 3.0rem;
+    font-weight: bolder;
+    width: 80%;
+    position: relative;
+    text-shadow: 1px 1px 1px rgb(149, 161, 35);
+}
+#welcome-section code{
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: var(--crimson);
+    text-shadow: 1px 1px 1px rgb(149, 161, 35);
+    animation: NameAppearCode 4s;
+    -webkit-animation: NameAppearCode 4s;
+}
+#welcome-section p{
+    line-height: 1.5;
+    font-size: 1.2em;
+    width: 60%;
+}
+.NameAndSub{
+    display:flex;
+    text-align: start;
+    flex-direction: column;
+}
+
+.hey{
+    animation: HeyEntry 2s;
+}
+.NameEntry{
+    animation: NameAppear 4s;
+    margin-left: 1rem;
+}
+.flex-welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.IntroDesc{
+    display: none;
+}
+@keyframes HeyEntry {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px);
+        -webkit-transform: translateX(-60px);
+        -moz-transform: translateX(-60px);
+        -ms-transform: translateX(-60px);
+        -o-transform: translateX(-60px);
+}
+    50% {
+        opacity: 0;
+        transform: translateX(-60px);
+        -webkit-transform: translateX(-60px);
+        -moz-transform: translateX(-60px);
+        -ms-transform: translateX(-60px);
+        -o-transform: translateX(-60px);
+}
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes NameAppear {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes NameAppearCode {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes colorChange {
+    0% {
+        color: #1100ff; /* HotPink */
+    }
+    1% {
+        color: #FF69B4; /* HotPink */
+    }
+    25% {
+        color: #FF0000; /* Red */
+    }
+    50% {
+        color: #00FF00; /* Lime */
+    }
+    75% {
+        color: #FFA500; /* Orange */
+    }
+    100% {
+        color: #1100ff; /* Gold */
+    }
+}
+.projects-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95vw;
+    height: 100%;
+    gap: 1rem;
+    margin: 2rem;
+}
+#projects{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+#projects h2{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--light-blue);
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+}
+.project-tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--lightdark-blue);
+    width: 35vw;
+    color: var(--dark-blue);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+.mail, .twitter {
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: var(--light-blue);
+    padding: 0.7rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 1rem;
+}
+.mail:hover i, .twitter:hover i{
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transition: transform 0.3s ease;
+}
+.contact-section{
+    padding-top: 1rem;
+}
+.project-tile:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.prev-image{
+    width: 100%;
+    border-radius: 10px;
+}
+.project-name{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 1rem;
+}
+#contact{
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@keyframes NavBarAppearance {
+    0% {
+        top: -10vh;
+    }
+    100% {
+        top: 0;
+    }
+}
