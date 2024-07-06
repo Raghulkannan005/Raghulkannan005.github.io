@@ -1,0 +1,98 @@
+body{
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.5;
+    color: #4D4e53;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --pyyel : #ffde57;
+    --pybl: #4584b6;
+    --pygr: #646464;
+}
+
+#navbar{
+    width: 300px;
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    border-right: 3px solid rgba(0, 22, 22, 0.4);
+    background-color: var(--pybl);
+}
+nav ul{
+    padding: 0;
+    margin-top: 0;
+    background-color: var(--pygr);
+}
+.nav-link{
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 10px 30px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid;
+}
+
+nav header{
+    text-align: center;
+    font-size: 1.8em;
+    border-bottom: 1px solid;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    background-color: var(--pybl);
+}
+#main-doc{
+    position: absolute;
+    margin-left: 295px;
+    padding: 20px 0;
+    background-color: var(--pyyel);
+    -webkit-transform: translateY(-8px);
+    -moz-transform: translateY(-8px);
+    -ms-transform: translateY(-8px);
+    -o-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+#main-doc header{
+    font-size: 1.8em;
+    color: black;
+    padding-left: 10px;
+    background-color: var(--pybl);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+article{
+    margin: 15px;
+}
+@media screen and (max-width:815px) {
+    #navbar{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        padding: 0;
+        border: none;
+        margin: 0;
+        max-height: 275px;
+        z-index: 999;
+}
+#main-doc {
+    position: relative;
+    margin-left: -8px;
+    margin-top: 283px;
+    width: 100%;
+}
+
+#navbar ul {
+    border: 1px solid;
+    height: 207px;
+}
+}
+#navbar ul {
+    overflow-y: auto;
+    overflow-x: hidden;
+}

@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.baskervville-sc-regular {
+    font-family: "Baskervville SC", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(1,1,1,1);
+    position: sticky;
+    top: 0;
+    color: #000;
+    padding: 0.1rem 1rem;
+    z-index: 1000;
+    background-color: #47bfee;
+    height: 10vh;
+}
+
+header img{
+    display: none;
+}
+header i{
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    color: #000;
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul li{
+    list-style: none;
+    padding: 1.5rem 1rem;
+    margin: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+header nav ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+header nav ul li:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    background-color: #82d1f0;
+}
+.mob-nav{
+    display: none;
+}
+
+.hero{
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form input[type="email"]{
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    width: 50%;
+}
+form input[type="submit"]{
+    background-color: rgb(253, 230, 101);
+    cursor: pointer;
+    color: black;
+    border: none;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    font-weight: bolder;
+    height: 3rem;
+    font-size: 1.04rem;
+}
+form input[type="submit"]:hover{
+    background-color: #47bfee;
+    color: white;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
+    background-color: #333;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+footer .ftr-btn .ftr-link,footer p{
+    color: white;
+    text-decoration: none;
+    margin:10px 0;
+    cursor: pointer;
+}
+footer .ftr-btn .ftr-link:hover{
+    color: #b1e2f5;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+.features {
+    display: flex;
+    width: 95%;
+    max-width: 1000px;
+    padding: 1rem;
+    margin: 1rem ;
+}
+.features .text p{
+    font-size: 0.84rem;
+}
+.features .text h2{
+    font-size: 1.8rem;
+    color: black;
+    margin: 5px auto;
+}
+
+.features .logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.features .text{
+    width: 80%;
+}
+.features .logo i{
+    color: #47bfee;
+    font-size: 4rem;
+}
+
+.containers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+.car-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    box-sizing: border-box;
+    max-width: 500px;
+    margin: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(1,1,1,1);
+}
+.car-cont img{
+    width: 90%;
+    height: 200px;
+    border-radius: 5px 5px 0 0;
+}
+#deals{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+.car-name{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    padding: 0.6rem ;
+    background-color: #47bfee;
+}
+.car-des{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+.car-des p{
+    font-size: 1rem;
+    margin-top: 0.7rem;
+}
+#review{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+.car-select{
+    border: solid;
+    border-width: 1px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgb(253, 242, 81);
+    margin: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.car-select:hover{
+    background-color: rgb(138, 219, 138);
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in-out;
+    -webkit-transition: transform 0.1s ease-in-out;
+    -moz-transition: transform 0.1s ease-in-out;
+    -ms-transition: transform 0.1s ease-in-out;
+    -o-transition: transform 0.1s ease-in-out;
+}
+.car-select a{
+    text-decoration: none;
+    color: black;
+}
+
+#review .review{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+    width: 50vw;
+    border: #333 solid 1px;
+    padding: 1rem;
+}
+.reviewer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#review .review-cont .review{
+    padding-top: unset;
+    padding-left: unset;
+    padding-right: unset;
+}
+.stars{
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    height: 50px;
+    background-color: #47bfee;
+}
+.stars i{
+    color:gold;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 1px black;
+}
+.reviewer>p{
+    margin: 0.5rem;
+}
+#review .rev-head i{
+    font-size: 3rem;
+}
+#review .rev-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#review .rev-head>*{
+    margin: 1rem;
+}
+.rev-head h2{
+    font-size: 2.6rem;
+}
+.car-des img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+    -ms-transition: transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+}
+.deal-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.deal-head h2{
+    font-size: 2.6rem;
+}
+.deal-head p{
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+center{
+    margin-bottom: 2rem;
+}
+.section-divider{
+    border: solid #333 1px;
+}
+.bar{
+    display: none;
+}
+
+
+@media screen and (max-width:425px) {
+
+#header{
+    min-height: 10vh;
+}
+
+#header ul{
+    display: none;
+}
+@keyframes slide-in {
+    0% {
+      transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+      -o-transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      -o-transform: translateX(0%);
+    }
+}
+
+.show {
+    display: block;
+    transform: translateX(100%);
+    animation: slide-in 0.5s ease-in-out forwards;
+    -webkit-animation: slide-in 0.5s ease-in-out forwards;
+}
+.mob-nav{
+    position: fixed;
+    background-color: #47bfee;
+    right: 0;
+    top: 10vh;
+    z-index: 1001;
+    height: 100%;
+    box-shadow: 0 2px 5px rgba(1,1,1,1);
+    width: 50%;
+}
+.mob-nav ul:first-child{
+    border-top: #333 solid 1px;
+}
+.mob-nav ul li:active {
+    background-color: #83dcf7;
+}
+header .bar:active{
+    background-color: #83dcf7;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+.mob-nav ul li{
+    list-style: none;
+    padding: 1.5rem;
+    border-bottom: solid 1px #333;
+}
+.mob-nav ul li a{
+    text-decoration: none;
+}
+
+#email{
+    width: 90%;
+}
+
+.bar{
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.bar a:active{
+    color: aquamarine;
+}
+
+.car-cont{
+    width: 90%;
+}
+
+#video{
+    max-width: 90%;
+}
+
+.review-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#review .review{
+    width: 90%;
+}
+
+footer>*{
+    font-size: 0.8rem;
+}
+
+.features .logo{
+    padding-right: 1rem;
+}
+
+.features .text>*{
+    padding: 0.25rem;
+}
+
+
+
+}
