@@ -377,3 +377,24 @@ body{
 #skill{
     margin-top: 7rem;
 }
+.fa-html5{
+    color: #E34F26;
+}
+.fa-css3-alt{
+    color: #1572B6;
+}
+.fa-js{
+    color: #F7DF1E;
+}
+.fa-react{
+    color: #61DAFB;
+}
+.fa-node{
+    color: #3C873A;
+}
+.fa-database{
+    color: #4479A1;
+}
+.fa-python{
+    color: #306998;
+}
