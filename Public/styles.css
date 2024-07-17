@@ -29,6 +29,9 @@ body{
     z-index: 1000;
     top: 0;
 }
+#navbar .hori-nav{
+    max-width: 620px;
+}
 #navigation{
     display: flex;
     justify-content: space-between;
@@ -268,6 +271,7 @@ body{
 }
 .contact-section{
     padding-top: 1rem;
+    margin-bottom: 1rem;
 }
 .project-tile:hover{
     -webkit-transform: scale(1.1);
@@ -400,6 +404,9 @@ body{
     color: #306998;
 }
 .bar{
+    display: none;
+}
+.mob-nav{
     display: none;
 }
 
