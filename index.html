@@ -30,13 +30,33 @@
 <body>
     <div id="portfolio">
         <nav id="navbar">
-            <ul id="navigation">
+            <h2 class="port">Portfolio</h2>
+            <div class="bar">
+                <div class="horbtn">
+                    <div class="btn1"></div>
+                    <div class="btn2"></div>
+                    <div class="btn3"></div>
+                </div>
+                <div class="xbtn hide">
+                    <div class="xbtn1"></div>
+                    <div class="xbtn2"></div>
+                </div>
+            </div>
+            <ul id="navigation" class="hori-nav">
                 <li><a href="#welcome-section">WELCOME</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="#skill">SKILLS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
+        <div class="mob-nav">
+            <ul class="vert-nav">
+                <li><a href="#welcome-section" class="nav-link">WELCOME</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#skill" class="nav-link">SKILLS</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
         <div id="welcome-section">
             <h1>
                 <div class="flex-welcome">
@@ -75,6 +95,7 @@
                 <a class="project preview" href="/Projects/PyDoc/PythonDoc.html" target="_blank"><img src="Media/PythonDocumentation_Preview.jpg" class="prev-image" alt="Car Deals Website"></a>
                 <div class="project-name">Python Documentation</div>
             </div>
+
         </div>
         </div>
         <br id="skill"><br><br><br><br>
@@ -163,7 +184,19 @@
                 }
             }, 20);
         }, 4000);
-    
+        const bar = document.querySelector('.bar');
+        const mobNav = document.querySelector('.mob-nav');
+        const horbtn = document.querySelector('.horbtn');
+        const xbtn = document.querySelector('.xbtn');
+
+        bar.addEventListener('click', () => {
+            mobNav.classList.toggle('show');
+            mobNav.classList.toggle('animateslidein');
+            xbtn.classList.toggle('hide');
+            horbtn.classList.toggle('hide');
+        });
+
+
 </script>
 
 </html>
