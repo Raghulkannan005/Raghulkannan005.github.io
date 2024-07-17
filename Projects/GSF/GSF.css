@@ -19,14 +19,15 @@ body{
     box-sizing: border-box;
     }
 .container .backdrop{
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.7);
         height: 100%;
         width: 100%;
         filter: blur(10px);
         position: absolute;
         z-index: -1;
         margin: 0;
-    }
+        -webkit-filter: blur(10px);
+}
 .container * {
     display: block;
 }
@@ -40,11 +41,10 @@ body{
 .container p{
     text-align: center;
 }
-.personal input, textarea, .dropdown select{
+.personal input, .dropdown select{
     width: 100%;
     box-sizing: border-box;
-    margin: inherit 0px;
-    height: 45px;
+    height: 2rem;
     font-size: 16px ;
     font-weight: 900;
 }
@@ -108,4 +108,23 @@ cursor: pointer;
 }
 .radio input:hover, .check input:hover, select:hover{
 cursor: pointer;
+}
+@media screen and (max-width:425px) {
+    label, legend {
+        font-size: 1rem;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    #description{
+        font-size: 0.8rem;
+    }
+    .container{
+        width: 90%;
+    }
+    #survey-form .personal .personal-inputs input, .dropdown select{
+        width: 100%;
+        height: 40px;
+        font-size: 1rem !important;
+    }
 }
