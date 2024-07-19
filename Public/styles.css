@@ -6,6 +6,10 @@
     --pale-yellow: #ecf39e;
     --crimson: #B80f0A;
 }
+center img{
+    max-width: 90%;
+    margin-bottom: 1rem;
+}
 body{
     font-family: 'Arial', sans-serif;
     margin: 0;
