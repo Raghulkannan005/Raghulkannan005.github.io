@@ -81,16 +81,21 @@ body{
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     border-radius: 10px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
 #navigation li a:hover{
     color: var(--dark-blue);
     background-color: var(--light-blue);
     padding: 0.5rem;
-    -webkit-transition: background-color 0.5s ease, font-size 0.5s ease;
-    -moz-transition: background-color 0.5s ease, font-size 0.5s ease;
-    -ms-transition: background-color 0.5s ease, font-size 0.5s ease;
-    -o-transition: background-color 0.5s ease, font-size 0.5s ease;
-    transition: background-color 0.5s ease, font-size 0.5s ease;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 }
 #welcome-section{
     background-color: var(--light-blue);
@@ -115,8 +120,8 @@ body{
     font-size: 1.2rem;
     color: var(--crimson);
     text-shadow: 1px 1px 1px rgb(149, 161, 35);
-    animation: NameAppearCode 4s;
     -webkit-animation: NameAppearCode 4s;
+    animation: NameAppearCode 4s;
 }
 #welcome-section p{
     line-height: 1.5;
@@ -147,19 +152,19 @@ body{
 @keyframes HeyEntry {
     0% {
         opacity: 0;
-        transform: translateX(-60px);
         -webkit-transform: translateX(-60px);
         -moz-transform: translateX(-60px);
         -ms-transform: translateX(-60px);
         -o-transform: translateX(-60px);
+        transform: translateX(-60px);
 }
     50% {
         opacity: 0;
-        transform: translateX(-60px);
         -webkit-transform: translateX(-60px);
         -moz-transform: translateX(-60px);
         -ms-transform: translateX(-60px);
         -o-transform: translateX(-60px);
+        transform: translateX(-60px);
 }
     100% {
         opacity: 1;
@@ -247,48 +252,49 @@ body{
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
-.mail, .twitter {
+
+.project-tile:hover{
+    transform: scale(1.1);
+}
+
+.mail {
     color: var(--dark-blue);
     font-size: 1.5rem;
     text-align: center;
     background-color: var(--light-blue);
     padding: 0.7rem;
-    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    border-radius: 50%;
     margin: 1rem;
 }
-.mail:hover i, .twitter:hover i{
-    transform: scale(1.4);
-    -webkit-transform: scale(1.4);
-    -moz-transform: scale(1.4);
-    -ms-transform: scale(1.4);
-    -o-transform: scale(1.4);
-    transition: transform 0.3s ease;
-    -webkit-transition: transform 0.3s ease;
-    -moz-transition: transform 0.3s ease;
-    -ms-transition: transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
+.mail i{
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+.mail:hover i{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 }
 .contact-section{
     padding-top: 1rem;
     margin-bottom: 1rem;
 }
-.project-tile:hover{
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-    -webkit-transition: transform 0.3s ease-in-out;
-    -moz-transition: transform 0.3s ease-in-out;
-    -ms-transition: transform 0.3s ease-in-out;
-    -o-transition: transform 0.3s ease-in-out;
-}
+
 
 .prev-image{
     width: 100%;
@@ -332,22 +338,20 @@ body{
     border-radius: 10px;
     padding-right:1rem;
     background-color: var(--light-blue);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
 .skill:hover{
     background-color: var(--dark-blue);
-    transition: background-color 0.5s ease;
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transition: transform 0.3s ease;
-    -webkit-transition: transform 0.3s ease;
-    -moz-transition: transform 0.3s ease;
-    -ms-transition: transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
     color: var(--light-blue);
-    text-shadow: var(--light-blue) 1px 1px 1px;
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    transform:scale(1.2);
 }
 .skills-container{
     display: flex;
@@ -507,12 +511,9 @@ body{
     }
 }
 .animateslidein{
-    transform: translateX(100%);
-    -webkit-animation: slide-in 0.5s ease-in-out forwards;
     animation: slide-in 0.5s ease-in-out forwards;
 }
 .animateslideout{
-    transform: translateX(0%);
     animation: slide-out 0.5s ease-in-out forwards;
 }
 @keyframes slide-out {
@@ -521,6 +522,10 @@ body{
 }
     100% {
         transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
 }
 }
 .horbtn>*{

@@ -25,4 +25,3 @@ bar.addEventListener('click', () => {
     xbtn.classList.toggle('hide');
     horbtn.classList.toggle('hide');
 });
-
