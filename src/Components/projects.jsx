@@ -6,7 +6,7 @@ return (
 		<div className="max-w-6xl mx-auto">
 			<h2 className="text-3xl font-bold text-center text-white mb-4">PROJECTS</h2>
 			<p className="text-gray-300 text-xl text-center mb-8">
-				Here are some of the projects I've worked on. Click on the images to view the project.
+				Here are some of the projects Ive worked on. Click on the images to view the project.
 			</p>
 			<div className="flex flex-wrap justify-center gap-6">
 				{projects.map((project, index) => (
