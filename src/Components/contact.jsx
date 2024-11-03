@@ -6,13 +6,13 @@ const Contact = () => {
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#0a192f] to-black" id="contact">
       <div className="text-white text-4xl text-center font-bold mb-4">
-      Let's Create Something Amazing Together! 🚀
+      Lets Create Something Amazing Together! 🚀
       </div>
       <div className="font-signi text-white text-lg max-w-2xl text-center px-4">
-      Ready to turn your innovative ideas into reality? I'm here to help!
+      Ready to turn your innovative ideas into reality? Im here to help!
       </div>
       <div className="font-signi text-white text-lg max-w-2xl text-center px-4">
-      Don't miss out - reach out now and let's build something extraordinary! ✨
+      Dont miss out - reach out now and lets build something extraordinary! ✨
       </div>
     <div className="mt-8 flex items-center">
       <a href="mailto:raghulkannan005@gmail.com" className="text-white hover:text-gray-300 flex items-center">
