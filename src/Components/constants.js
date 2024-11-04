@@ -1,12 +1,15 @@
 import { SiHtml5, SiJavascript, SiReact, SiTailwindcss, SiBootstrap, SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPython } from "react-icons/si";
+
 import CarDealImage from "../../Public/Media/Project_Preview/TheCarDeals_Preview.jpg";
 import SurveyFormImage from "../../Public/Media/Project_Preview/SurveyForm_Prev.jpg";
 import TributePageImage from "../../Public/Media/Project_Preview/TributePage_Preview.jpg";
 import PythonDocImage from "../../Public/Media/Project_Preview/PythonDocumentation_Preview.jpg";
-import carDealLink from "../../Public/Projects/CarDeal/Cardeal.html";
-import surveyFormLink from "../../Public/Projects/GSF/GymSurveyForm.html";
-import tributePageLink from "../../Public/Projects/Tribute/apj.html";
-import pythonDocLink from "../../Public/Projects/PyDoc/PythonDoc.html";
+
+
+const carDealLink = "../../Public/Projects/CarDeal/Cardeal.html";
+const surveyFormLink = "../../Public/Projects/GSF/GymSurveyForm.html";
+const tributePageLink = "../../Public/Projects/Tribute/apj.html";
+const pythonDocLink = "../../Public/Projects/PyDoc/PythonDoc.html";
 
 
 export const hero = {
