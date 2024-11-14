@@ -1,9 +1,9 @@
 import { SiHtml5, SiJavascript, SiReact, SiTailwindcss, SiBootstrap, SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPython } from "react-icons/si";
 
-import CarDealImage from "/Media/Project_Preview/TheCarDeals_Preview.jpg";
-import SurveyFormImage from "/Media/Project_Preview/SurveyForm_Prev.jpg";
-import TributePageImage from "/Media/Project_Preview/TributePage_Preview.jpg";
-import PythonDocImage from "/Media/Project_Preview/PythonDocumentation_Preview.jpg";
+import CarDealImage from "../../Media/Project_Preview/TheCarDeals_Preview.jpg";
+import SurveyFormImage from "../../Media/Project_Preview/SurveyForm_Prev.jpg";
+import TributePageImage from "../../Media/Project_Preview/TributePage_Preview.jpg";
+import PythonDocImage from "../../Media/Project_Preview/PythonDocumentation_Preview.jpg";
 
 
 const carDealLink = "/Projects/CarDeal/Cardeal.html";
