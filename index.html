@@ -1,13 +1,163 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/icon" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raghul Kannan</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="./src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raghul Kannan | Full Stack Developer Portfolio</title>
+
+    <meta name="description" content="Raghul Kannan's portfolio - Full Stack Developer specialized in creating magical websites. Explore my projects, skills, and get in touch!">
+    <meta name="keywords" content="Raghul Kannan, raghul kannan developer, raghulkannan portfolio, raghul website, raghul kannan dev, raghulkannan005, raghuldev, Full Stack Developer, Web Developer, Portfolio, Projects, Skills, Contact">
+    <meta name="author" content="Raghul Kannan">
+
+    <link rel="canonical" href="https://raghulkannan.me">
+    <meta name="google-site-verification" content="Rk1s1vBAUzZk32-ITouZMu8TNo4xfc4oISsI-Z-IEKU" />
+
+    <meta property="og:title" content="Raghul Kannan | Full Stack Developer Portfolio">
+    <meta property="og:description" content="Raghul Kannan's portfolio - Full Stack Developer specialized in creating magical websites. Explore my projects, skills, and get in touch!">
+    <meta property="og:url" content="https://www.raghulkannan.me">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="./Public/styles.css">
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <div id="portfolio">
+        <nav id="navbar">
+            <h2 class="port">Portfolio</h2>
+            <div class="bar">
+                <div class="horbtn">
+                    <div class="btn1"></div>
+                    <div class="btn2"></div>
+                    <div class="btn3"></div>
+                </div>
+                <div class="xbtn hide" onclick="veliyaPo()">
+                    <div class="xbtn1"></div>
+                    <div class="xbtn2"></div>
+                </div>
+            </div>
+            <ul id="navigation" class="hori-nav">
+                <li><a href="#welcome-section">WELCOME</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#skill">SKILLS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="mob-nav">
+            <ul class="vert-nav">
+                <li><a href="#welcome-section" class="nav-link">WELCOME</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#skill" class="nav-link">SKILLS</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+        <div id="welcome-section">
+            <h1>
+                <div class="flex-welcome">
+                    <div class="hey">Hey,</div> 
+                    <div class="NameAndSub">
+                        <span class="NameEntry"> I'm
+                            <span id="name">Raghul Kannan</span> :)
+                        </span>
+                    </div>
+                </div>
+                <code>Code Craftsman </code>
+            </h1>
+
+            <p class="IntroDesc">Specialized In Full Stack Development Who Makes People's Life Easier By Creating Magical Websites.</p>
+            <a target="_blank" id="profile-link"></a>
+            
+        </div>
+        <div id="projects">
+            <br><br><br><br><br><br>
+            <h2>PROJECTS</h2>
+            <p>These projects are for the Responsive Web Design Certification Project. I haven't updated the latest projects yet.</p>
+            <div class="projects-content">
+            <div class="project-tile">
+                <a class="project preview" href="./Projects/CarDeal/Cardeal.html" target="_blank"><img src="./Media/TheCarDeals_Preview.jpg" class="prev-image" alt="Car Deals Website"></a>
+                <div class="project-name">Junior Car Deals</div>
+            </div>
+            <div class="project-tile">
+                <a class="project preview" href="./Projects/GSF/GymSurveyForm.html" target="_blank"><img src="./Media/SurveyForm_Prev.jpg" class="prev-image" alt="Car Deals Website"></a>
+                <div class="project-name">Gym Survey Form</div>
+            </div>
+            <div class="project-tile">
+                <a class="project preview" href="./Projects/Tribute/apj.html" target="_blank"><img src="./Media/TributePage_Preview.jpg" class="prev-image" alt="Car Deals Website"></a>
+                <div class="project-name">Tribute Page</div>
+            </div>
+            <div class="project-tile">
+                <a class="project preview" href="./Projects/PyDoc/PythonDoc.html" target="_blank"><img src="./Media/PythonDocumentation_Preview.jpg" class="prev-image" alt="Car Deals Website"></a>
+                <div class="project-name">Python Documentation</div>
+            </div>
+
+        </div>
+        </div>
+        <br id="skill"><br><br><br><br>
+        <div  class="skills">
+            <h2>SKILLS</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <i class="fab fa-html5" ></i>
+                    <span>HTML</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-css3-alt" ></i>
+                    <span>CSS</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill">
+                    <img src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg" alt="Tailwind logo">
+                    <span>Tailwind CSS</span>
+                </div>
+                <div class="skill">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png?20210507000024" alt="Bootstrap logo">
+                    <span>Bootstrap</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-node" ></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill">
+                    <img src="https://w7.pngwing.com/pngs/846/87/png-transparent-mean-solution-stack-express-js-node-js-javascript-github-text-trademark-logo-thumbnail.png" alt="Express js logo">
+                    <span>Express.JS</span>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="mongo db logo">
+                    <span>Mongodb</span>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+            </div>
+        </div>
+    <footer>
+        <div id="contact">
+            <h2>Let's Work Together</h2>
+            <p>If you like my work and have some cool projects to work on, just send me a message and let's get started!</p>
+                <div class="contact-section">
+                    <a class="mail" href="mailto:raghulkannan005@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+        </div>
+    </footer>
+</body>
+<script src="./Public/script.js"></script>
+
 </html>
