@@ -6,7 +6,7 @@ import TributePageImage from "/Media/Project_Preview/TributePage_Preview.jpg";
 import PythonDocImage from "/Media/Project_Preview/PythonDocumentation_Preview.jpg";
 
 
-const carDealLink = "Projects/CarDeal/Cardeal.html";
+const carDealLink = "/Projects/CarDeal/Cardeal.html";
 const surveyFormLink = "/Projects/GSF/GymSurveyForm.html";
 const tributePageLink = "/Projects/Tribute/apj.html";
 const pythonDocLink = "/Projects/PyDoc/PythonDoc.html";
