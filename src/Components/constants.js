@@ -1,16 +1,16 @@
 import { SiHtml5, SiJavascript, SiReact, SiTailwindcss, SiBootstrap, SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPython } from "react-icons/si";
 
-import CarDealImage from "../../Public/Media/Project_Preview/TheCarDeals_Preview.jpg";
-import SurveyFormImage from "../../Public/Media/Project_Preview/SurveyForm_Prev.jpg";
-import TributePageImage from "../../Public/Media/Project_Preview/TributePage_Preview.jpg";
-import PythonDocImage from "../../Public/Media/Project_Preview/PythonDocumentation_Preview.jpg";
+import CarDealImage from "../../public/Media/Project_Preview/TheCarDeals_Preview.jpg";
+import SurveyFormImage from "../../public/Media/Project_Preview/SurveyForm_Prev.jpg";
+import TributePageImage from "../../public/Media/Project_Preview/TributePage_Preview.jpg";
+import PythonDocImage from "../../public/Media/Project_Preview/PythonDocumentation_Preview.jpg";
 
 
 
-const carDealLink = "/Public/Projects/CarDeal/Cardeal.html";
-const surveyFormLink = "/Public/Projects/GSF/GymSurveyForm.html";
-const tributePageLink = "/Public/Projects/Tribute/apj.html";
-const pythonDocLink = "/Public/Projects/PyDoc/PythonDoc.html";
+const carDealLink = "/public/Projects/CarDeal/Cardeal.html";
+const surveyFormLink = "/public/Projects/GSF/GymSurveyForm.html";
+const tributePageLink = "/public/Projects/Tribute/apj.html";
+const pythonDocLink = "/public/Projects/PyDoc/PythonDoc.html";
 
 
 

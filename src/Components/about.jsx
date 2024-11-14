@@ -3,7 +3,7 @@ import { skill } from "./constants.js";
 const About = () => {
     return (
         <div className="min-h-screen w-full p-20 flex flex-col justify-center items-center bg-gradient-to-b from-[#000328] to-[#014449]" id="about">
-            <p className="text-gray-300 font-rubi text-xl text-center mb-8">Technologies and tools I've worked with</p>
+            <p className="text-gray-300 font-rubi text-xl text-center mb-8">Technologies and tools Ive worked with</p>
             <div className="flex flex-wrap justify-center space-x-4">
 
             {skill.map((prop, index) => (

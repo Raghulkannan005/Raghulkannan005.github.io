@@ -8,10 +8,10 @@ export default defineConfig({
     outDir: 'dist',
   },
   resolve: {
-    extensions: ['.js', '.jsx'] // Add this line
+    extensions: ['.js', '.jsx']
   },
   server: {
-    // Add proper MIME type handling
+
     headers: {
       'Content-Type': 'text/javascript'
     }

@@ -1,5 +1,5 @@
-import ragImg2 from "../../Public/Media/Raghul/rag-3.jpg";
-import greenTea from "../../Public/Media/greenTeaForest.mp3";
+import ragImg2 from "../../public/Media/Raghul/rag-3.jpg";
+import greenTea from "../../public/Media/greenTeaForest.mp3";
 const Hero = () => {
 
     return (
