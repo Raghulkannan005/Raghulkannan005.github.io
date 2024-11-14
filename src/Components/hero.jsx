@@ -12,7 +12,7 @@ const Hero = () => {
             <div className="text-white font-bold font-signi w-full flex flex-col justify-center items-center mt-32 lg:w-1/2 lg:mt-0">
                 <span className="animate-gradient bg-clip-text text-5xl text-transparent text-center lg:text-start w-3/4">Raghul Kannan</span>
                 <span className="font-signi text-yellow-400 text-lg m-4 lg:text-start text-center w-3/4">CODE CRAFTSMAN</span>
-                <span className="font-rubi text-white/40 text-lg m-4 lg:text-start text-center w-3/4">Specialized In Full Stack Development Who Makes People's Life Easier By Creating Magical Websites.</span>
+                <span className="font-rubi text-white/40 text-lg m-4 lg:text-start text-center w-3/4">Specialized In Full Stack Development Who Makes Peoples Life Easier By Creating Magical Websites.</span>
             </div>
 
             <div className="flex justify-center items-center w-full lg:w-1/2">
