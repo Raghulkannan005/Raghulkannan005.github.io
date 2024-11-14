@@ -6,6 +6,5 @@ import App from './App'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
-    {console.log('Page is running')}
   </StrictMode>
 )
