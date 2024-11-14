@@ -6,10 +6,11 @@ import TributePageImage from "../../Public/Media/Project_Preview/TributePage_Pre
 import PythonDocImage from "../../Public/Media/Project_Preview/PythonDocumentation_Preview.jpg";
 
 
-const carDealLink = "../../Public/Projects/CarDeal/Cardeal.html";
-const surveyFormLink = "../../Public/Projects/GSF/GymSurveyForm.html";
-const tributePageLink = "/Projects/Tribute/apj.html";
-const pythonDocLink = "/Projects/PyDoc/PythonDoc.html";
+
+const carDealLink = "/Public/Projects/CarDeal/Cardeal.html";
+const surveyFormLink = "/Public/Projects/GSF/GymSurveyForm.html";
+const tributePageLink = "/Public/Projects/Tribute/apj.html";
+const pythonDocLink = "/Public/Projects/PyDoc/PythonDoc.html";
 
 
 
