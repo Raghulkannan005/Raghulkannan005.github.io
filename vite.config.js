@@ -5,6 +5,15 @@ export default defineConfig({
   base: '/',
   plugins: [react()],
   build: {
-    outDir: 'dist' // or 'docs' if you're deploying on GitHub Pages directly
+    outDir: 'dist',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'] // Add this line
+  },
+  server: {
+    // Add proper MIME type handling
+    headers: {
+      'Content-Type': 'text/javascript'
+    }
   }
 });
