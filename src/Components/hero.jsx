@@ -1,4 +1,4 @@
-import ragImg2 from "../../public/Media/Raghul/rag-3.jpg";
+import ragImg3 from "../../public/Media/Raghul/rag-3.jpg";
 import greenTea from "../../public/Media/greenTeaForest.mp3";
 const Hero = () => {
 
@@ -16,7 +16,7 @@ const Hero = () => {
             </div>
 
             <div className="flex justify-center items-center w-full lg:w-1/2">
-                <img src={ragImg2} alt="Raghul's Image" className="sm:h-64 h-52 rounded-xl"/>
+                <img src={ragImg3} alt="Raghul's Image" className="sm:h-64 h-52 rounded-xl"/>
             </div>
         </div>
     );
