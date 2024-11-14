@@ -12,6 +12,7 @@ const tributePageLink = "/Projects/Tribute/apj.html";
 const pythonDocLink = "/Projects/PyDoc/PythonDoc.html";
 
 
+
 export const hero = {
     hi : ['Hi','Raghul Kannan'],
     titles : ["Full Stack Developer", "UI/UX Designer",  "Photo/Video Editor"],
