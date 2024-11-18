@@ -3,9 +3,9 @@
 @tailwind utilities;
 @font-face {
     font-family: 'rubi';
-    src: local('rubi'), url(./fonts/Rubik/static/Rubik-Regular.ttf) format('truetype');
+    src: local('rubi'), url(/fonts/Rubik/static/Rubik-Regular.ttf) format('truetype');
   }
 @font-face {
     font-family: 'signi';
-    src: local('signi'), url(./fonts/SignikaNegative-VariableFont_wght.ttf) format('truetype');
+    src: local('signi'), url(/fonts/SignikaNegative-VariableFont_wght.ttf) format('truetype');
   }

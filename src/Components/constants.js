@@ -1,14 +1,16 @@
 import { SiHtml5, SiJavascript, SiReact, SiTailwindcss, SiBootstrap, SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPython } from "react-icons/si";
 
-const CarDealImage = '/Media/Project_Preview/TheCarDeals_Preview.jpg';
-const SurveyFormImage = '/Media/Project_Preview/SurveyForm_Prev.jpg';
-const TributePageImage = '/Media/Project_Preview/TributePage_Preview.jpg';
-const PythonDocImage = '/Media/Project_Preview/PythonDocumentation_Preview.jpg';
+const BASE_URL = import.meta.env.BASE_URL;
 
-const carDealLink = "/Projects/CarDeal/Cardeal.html";
-const surveyFormLink = "/Projects/GSF/GymSurveyForm.html";
-const tributePageLink = "/Projects/Tribute/apj.html";
-const pythonDocLink = "/Projects/PyDoc/PythonDoc.html";
+const CarDealImage = `${BASE_URL}Media/Project_Preview/TheCarDeals_Preview.jpg`;
+const SurveyFormImage = `${BASE_URL}Media/Project_Preview/SurveyForm_Prev.jpg`;
+const TributePageImage = `${BASE_URL}Media/Project_Preview/TributePage_Preview.jpg`;
+const PythonDocImage = `${BASE_URL}Media/Project_Preview/PythonDocumentation_Preview.jpg`;
+
+const carDealLink = `${BASE_URL}Projects/CarDeal/Cardeal.html`;
+const surveyFormLink = `${BASE_URL}Projects/GSF/GymSurveyForm.html`;
+const tributePageLink = `${BASE_URL}Projects/Tribute/apj.html`;
+const pythonDocLink = `${BASE_URL}Projects/PyDoc/PythonDoc.html`;
 
 export const hero = {
     hi: ['Hi', 'Raghul Kannan'],

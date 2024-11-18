@@ -2,19 +2,27 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  base: '/',
   plugins: [react()],
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
   server: {
     port: 5173,
-    host: '0.0.0.0', // Bind to all interfaces
-    open: true, // Don't auto-open browser
-    hmr: true, // Enable hot module replacement
+    host: '0.0.0.0',
+    open: true,
+    hmr: true,
     watch: {
-      usePolling: true // Better network watching
+      usePolling: true
     }
   },
-  base: '/',
+  resolve: {
+    extensions: ['.js', '.jsx']
+  }
 });
