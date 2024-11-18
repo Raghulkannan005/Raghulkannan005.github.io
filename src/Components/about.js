@@ -1,5 +1,5 @@
 import { skill } from "./constants.js";
-import { useTheme } from '../context/ThemeContext';  // Fix import path
+import { useTheme } from '../context/ThemeContext';
 
 const About = () => {
     const { darkMode } = useTheme();
