@@ -16,5 +16,5 @@ export default defineConfig({
       usePolling: true // Better network watching
     }
   },
-  base: './',
+  base: '/',
 });
