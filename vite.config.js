@@ -2,14 +2,14 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/',
+  base: '/', // For GitHub Pages custom domain
   plugins: [react()],
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
       output: {
-        manualChunks: undefined,
+        // No manualChunks for now
       },
     },
   },
@@ -19,10 +19,7 @@ export default defineConfig({
     open: true,
     hmr: true,
     watch: {
-      usePolling: true
-    }
+      usePolling: true,
+    },
   },
-  resolve: {
-    extensions: ['.js', '.jsx']
-  }
 });
