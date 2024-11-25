@@ -27,7 +27,7 @@ const Navbar = () => {
 
     const Btns = (props) => {
         return (
-            <div className="text-white font-rubi font-bold text-2xl ml-10 text-center hover:bg-slate-300 cursor-pointer hover:scale-110 hover:text-darkBlue rounded-xl p-1 transition duration-300 ease-in-out hover:shadow-md hover:shadow-blue-500" onClick={navClicked}>{props.navBtns}</div>
+            <div className={`${darkMode ? 'text-white hover:bg-slate-300' : 'text-gray-900 hover:bg-[#7e92ff]'} font-rubi font-bold text-2xl ml-10 text-center  cursor-pointer hover:scale-110 hover:text-darkBlue rounded-xl p-1 transition duration-300 ease-in-out hover:shadow-md hover:shadow-blue-500`} onClick={navClicked}>{props.navBtns}</div>
         )
     }
 
@@ -39,7 +39,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className={`backdrop-blur-lg ${darkMode ? 'bg-black/40' : 'bg-white/40'} flex items-center justify-center py-4 z-50 top-0 w-full fixed`}>
+        <nav className={`backdrop-blur-lg ${darkMode ? 'bg-black/40' : 'bg-white/10 '} flex items-center justify-center py-4 z-50 top-0 w-full fixed`}>
             <div className="flex justify-between items-center h-12 w-full">
                 <div className="hidden sm:h-full sm:justify-center sm:items-center sm:flex-wrap sm:w-full sm:flex">
                     <Link to="hero" smooth={true} duration={500}><Btns navBtns="Home" /></Link>
@@ -57,7 +57,7 @@ const Navbar = () => {
                 <div className="flex">
                     <BiAdjust 
                         onClick={toggleTheme}
-                        className={`${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-600 hover:text-gray-800'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out cursor-pointer`} 
+                        className={`${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-800 hover:text-gray-300'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out cursor-pointer`} 
                     />
                     {isMuted ?(
                         <IoVolumeMute onClick={() => {
