@@ -12,6 +12,14 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.use(express.static('dist', {
+    extensions: ['html', 'js'], // Ensure correct extensions
+    setHeaders: (res, path) => {
+        if (path.endsWith('.js')) {
+            res.setHeader('Content-Type', 'application/javascript');
+        }
+    },
+}));
 
 // Rate limiting configuration
 const messageLimiter = rateLimit({
