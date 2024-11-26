@@ -27,7 +27,7 @@ const Navbar = () => {
 
     const Btns = (props) => {
         return (
-            <div className={`${darkMode ? 'text-white hover:bg-slate-300' : 'text-gray-900 hover:bg-[#95cafc]'} font-rubi font-bold text-2xl ml-10 text-center  cursor-pointer hover:scale-110 hover:text-darkBlue rounded-xl p-1 transition duration-300 ease-in-out hover:shadow-md hover:shadow-blue-500`} onClick={navClicked}>{props.navBtns}</div>
+            <div className={`${darkMode ? 'text-white hover:bg-slate-300' : 'text-gray-900 hover:bg-[#95cafc]'} font-rubi font-bold text-2xl ml-10 text-center  cursor-pointer hover:scale-110 hover:text-darkBlue rounded-xl p-1 transition duration-300 ease-in-out hover:shadow-md hover:shadow-blue-500 `} onClick={navClicked}>{props.navBtns}</div>
         )
     }
 
@@ -47,24 +47,24 @@ const Navbar = () => {
                     <Link to="projects" smooth={true} duration={500}><Btns navBtns="Project" /></Link>
                     <Link to="contact" smooth={true} duration={500}><Btns navBtns="Contact" /></Link>
                 </div>
-                <div className={`sm:hidden ${isActive ? 'flex' : 'hidden'} flex-col fixed top-20 right-0 bg-black/85 pr-8 gap-2 rounded-b-xl pb-8`}>
+                <div className={`sm:hidden ${isActive ? 'flex' : 'hidden'} flex-col fixed top-20 right-0 ${darkMode ? 'bg-black/85 ' : 'bg-gray-300/30'} pr-8 gap-2 rounded-b-xl pb-8`}>
                     <Link to="hero" smooth={true} duration={500}> <Btns navBtns="Home" />  </Link>
                     <Link to="about" smooth={true} duration={500}> <Btns navBtns="About" />  </Link>
                     <Link to="projects" smooth={true} duration={500}> <Btns navBtns="Project" />  </Link>
                     <Link to="contact" smooth={true} duration={500}> <Btns navBtns="Contact" />  </Link>
                 </div>
-                <h1 className="text-white sm:hidden mx-10 font-signi font-bold text-3xl">Portfolio</h1>
+                <h1 className={` ${darkMode ? 'text-white ' : 'text-black '} sm:hidden mx-10 font-signi font-bold text-3xl`}>Portfolio</h1>
                 <div className="flex">
                     <BiAdjust 
                         onClick={toggleTheme}
-                        className={`${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-800 hover:text-gray-300'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out cursor-pointer`} 
+                        className={`${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-600 hover:text-gray-300'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out cursor-pointer`} 
                     />
                     {isMuted ?(
                         <IoVolumeMute onClick={() => {
                             const audio = document.querySelector('audio');
                             {isPlaying ? audio.pause(): audio.play()}
                             setMuted(!isMuted);
-                        }} className={` ${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-800 hover:text-gray-300'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out`}>
+                        }} className={` ${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-600 hover:text-gray-300'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out`}>
                         </IoVolumeMute>
                     ): (
                         <IoVolumeMediumSharp onClick={() => {
@@ -73,10 +73,10 @@ const Navbar = () => {
                             setMuted(!isMuted);
                             setPaused(true);
                             setPlaying(false);
-                        }}  className={` ${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-800 hover:text-gray-300'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out`}>
+                        }}  className={` ${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-600 hover:text-gray-300'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out`}>
                         </IoVolumeMediumSharp>
                     )  }
-                    <GiHamburgerMenu className="sm:hidden text-white/30 my-4 size-5 hover:text-white hover:scale-110 rounded-full h-12 w-12 py-2 transition duration-100 ease-in-out" onClick={toggleClass}></GiHamburgerMenu>
+                    <GiHamburgerMenu className={`sm:hidden  ${darkMode ? 'text-white/30 ' : 'text-gray-800 '}  my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-2 transition duration-100 ease-in-out`} onClick={toggleClass}></GiHamburgerMenu>
                 </div>
             </div>
         </nav>

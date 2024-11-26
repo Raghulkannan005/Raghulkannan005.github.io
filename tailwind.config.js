@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '470px',
+      },
       animation: {
         fade: 'fadeInOut 1s ease-in-out infinite',
         Gradient: 'darkColorGradientChanger 1s ease-in-out infinite',

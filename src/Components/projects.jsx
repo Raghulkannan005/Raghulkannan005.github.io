@@ -10,9 +10,9 @@ return (
 			<p className={`${darkMode? 'text-gray-300' :'text-slate-950'} text-xl text-center mb-8`}>
 				Here are some of the projects I&apos;ve worked on. Click on the images to view the project.
 			</p>
-			<div className="flex flex-wrap justify-center gap-6">
+			<div className="flex flex-wrap justify-center mx-auto w-9/10 gap-6">
 				{projects.map((project, index) => (
-					<div key={index} className="bg-gray-800 rounded-lg overflow-hidden w-full max-w-[400px] md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]">
+					<div key={index} className="bg-gray-800 max-w-[300px] rounded-lg overflow-hidden">
 						<a href={project.link} target="_blank" className="block" rel="noopener noreferrer" aria-label={`View ${project.name} project`}>
 							<img src={project.image} alt={project.alt} className="w-full h-48 object-cover" />
 						</a>

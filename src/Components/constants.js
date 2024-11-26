@@ -6,11 +6,13 @@ const CarDealImage = `${BASE_URL}Media/Project_Preview/TheCarDeals_Preview.jpg`;
 const SurveyFormImage = `${BASE_URL}Media/Project_Preview/SurveyForm_Prev.jpg`;
 const TributePageImage = `${BASE_URL}Media/Project_Preview/TributePage_Preview.jpg`;
 const PythonDocImage = `${BASE_URL}Media/Project_Preview/PythonDocumentation_Preview.jpg`;
+const OldPortImage = `${BASE_URL}Media/Project_Preview/OldPortPrev.jpg`;
 
 const carDealLink = `${BASE_URL}Projects/CarDeal/Cardeal.html`;
 const surveyFormLink = `${BASE_URL}Projects/GSF/GymSurveyForm.html`;
 const tributePageLink = `${BASE_URL}Projects/Tribute/apj.html`;
 const pythonDocLink = `${BASE_URL}Projects/PyDoc/PythonDoc.html`;
+const OldPortfolioLink = `${BASE_URL}Projects/Old Portfolio/OldPort.html`;
 
 export const hero = {
     hi: ['Hi', 'Raghul Kannan'],
@@ -32,6 +34,7 @@ export const skill = [
 ];
 
 export const projects = [
+
     {
         name: "Junior Car Deals",
         link: carDealLink,
@@ -55,5 +58,11 @@ export const projects = [
         link: pythonDocLink,
         image: PythonDocImage,
         alt: "Python Documentation"
+    },
+    {
+        name: "Prior Portfolio",
+        link: OldPortfolioLink,
+        image: OldPortImage,
+        alt: "Old Portfolio"
     }
 ];
