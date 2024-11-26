@@ -1,11 +1,48 @@
+// src/Components/contact.jsx
+import { useState } from 'react';
 import { HiOutlineMail } from "react-icons/hi";
-import { useTheme } from '../context/ThemeContext';  // Fix import path
+import { useTheme } from '../context/ThemeContext';
 
 const Contact = () => {
     const { darkMode } = useTheme();
-    
+    const [isLoading, setIsLoading] = useState(false);
+    const [status, setStatus] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+        setStatus('');
+        
+        try {
+            const response = await fetch('https://raghulkannan.vercel.app/sendMsg', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ 
+                    message: e.target.message.value 
+                })
+            });
+
+            if (response.ok) {
+                setStatus('Message sent successfully!');
+                e.target.reset();
+            } else if (response.status === 429) {
+                const errorData = await response.json();
+                setStatus(errorData.message);
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setStatus('Failed to send message. Please try again.');
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     return (
-        <div className={`h-screen w-full flex flex-col justify-center items-center ${darkMode ? 'bg-gradient-to-b from-[#0a192f] to-black' : 'bg-gradient-to-b from-[#86a2ee] to-[#75b7f5]'} `} id="contact">
+        <div className={`h-screen w-full flex flex-col justify-center items-center ${darkMode ? 'bg-gradient-to-b from-[#0a192f] to-black' : 'bg-gradient-to-b from-[#86a2ee] to-[#75b7f5]'}`} id="contact">
             <div className={`${darkMode? 'text-white' :'text-black'} text-4xl px-6 text-center font-bold mb-4`}>
             Let&apos;s Create Something Amazing Together! 🚀
             </div>
@@ -26,22 +63,41 @@ const Contact = () => {
                 </a>
             </div>
 
-            <div className="mt-8 w-full max-w-md px-4 ">
-                <form className="flex flex-col items-center">
+            <div className="mt-8 w-full max-w-md px-4">
+                <form onSubmit={handleSubmit} className="flex flex-col items-center">
                     <textarea
                         name="message"
-                        className="w-full p-2 mb-4 text-black rounded-lg resize -none"
+                        className="w-full p-2 mb-4 text-black rounded-lg resize-none"
                         rows="4"
                         placeholder="Write your message here..."
+                        maxLength={20000}
                         required
+                        disabled={isLoading}
                     />
                     <button
-                    type="submit"
-                    className={` px-6 py-3 rounded-lg text-white hover:scale-105 duration-200 ${darkMode ? 'bg-gradient-to-r w-2/5 from-cyan-500 to-blue-500' : 'bg-gradient-to-r w-2/5 from-cyan-700 to-blue-700'}`}
+                        type="submit"
+                        disabled={isLoading}
+                        className={`px-6 py-3 rounded-lg text-white hover:scale-105 duration-200 ${
+                            darkMode ? 'bg-gradient-to-r w-2/5 from-cyan-500 to-blue-500' 
+                            : 'bg-gradient-to-r w-2/5 from-cyan-700 to-blue-700'
+                        } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
                     >
-                    Send Message
+                        {isLoading ? 'Sending...' : 'Send Message'}
                     </button>
+                    {status && (
+                        <p className={`mt-4 text-center ${status.includes('Failed') || status.includes('exceeded') ? 'text-red-500' : 'text-green-500'}`}>
+                            {status}
+                        </p>
+                    )}
                 </form>
+            </div>
+
+            <div className="mt-8">
+                <a href="/admin" target="_blank" rel="noopener noreferrer">
+                    <button className="px-6 py-3 rounded-lg text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:scale-105 duration-200">
+                        Admin
+                    </button>
+                </a>
             </div>
         </div>
     );

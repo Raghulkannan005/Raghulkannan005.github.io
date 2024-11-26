@@ -1,8 +1,10 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/navBar';
 import Hero from './Components/hero';
 import About from './Components/about';
 import Projects from './Components/projects';
 import Contact from './Components/contact';
+import AdminLogin from './Components/AdminLogin';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 
 const AppContent = () => {
@@ -21,7 +23,12 @@ const AppContent = () => {
 const App = () => {
     return (
         <ThemeProvider>
-            <AppContent />
+            <Router>
+                <Routes>
+                    <Route path="/" element={<AppContent />} />
+                    <Route path="/admin" element={<AdminLogin />} />
+                </Routes>
+            </Router>
         </ThemeProvider>
     );
 };

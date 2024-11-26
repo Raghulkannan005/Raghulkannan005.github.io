@@ -12,7 +12,7 @@ const carDealLink = `${BASE_URL}Projects/CarDeal/Cardeal.html`;
 const surveyFormLink = `${BASE_URL}Projects/GSF/GymSurveyForm.html`;
 const tributePageLink = `${BASE_URL}Projects/Tribute/apj.html`;
 const pythonDocLink = `${BASE_URL}Projects/PyDoc/PythonDoc.html`;
-const OldPortfolioLink = `${BASE_URL}Projects/Old Portfolio/OldPort.html`;
+const OldPortfolioLink = `${BASE_URL}Projects/OldPortfolio/OldPort.html`;
 
 export const hero = {
     hi: ['Hi', 'Raghul Kannan'],
