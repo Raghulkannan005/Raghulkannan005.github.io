@@ -4,23 +4,16 @@
     {
       "src": "backend/index.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
     }
   ],
   "routes": [
     {
       "src": "/api/sendMsg",
-      "dest": "/api/sendMsg"
+      "dest": "/backend/index.js"
     },
     {
       "src": "/api/admin",
-      "dest": "/api/admin"
+      "dest": "/backend/index.js"
     },
     {
       "src": "/(.*)",

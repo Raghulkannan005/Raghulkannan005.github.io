@@ -8,8 +8,9 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-    origin: ['https://raghulkannan.vercel.app']
+    origin: ['https://raghulkannan.vercel.app']  // Make sure this is correct
 }));
+
 app.use(express.json());
 
 // Rate limiting configuration
@@ -48,6 +49,7 @@ app.post('/api/sendMsg', messageLimiter, async (req, res) => {
 });
 
 app.post("/api/admin", async (req, res) => {
+    console.log("Received admin request", req.body);  // Add this log for debugging
     const { id, password } = req.body;
     const isAdmin = ADMIN_CREDENTIALS.some(cred => cred.id === id && cred.password === password);
     if (isAdmin) {
