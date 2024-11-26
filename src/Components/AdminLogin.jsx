@@ -12,7 +12,7 @@ const AdminLogin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://raghulkannan.vercel.app/admin', { id, password });
+            const response = await axios.post('https://raghulkannan.vercel.app/api/admin', { id, password });
             setMessages(response.data);
             setError('');
         } catch (err) {

@@ -27,7 +27,7 @@ const ADMIN_CREDENTIALS = [
 ];
 
 // Apply the rate limiting middleware to the /sendMsg endpoint
-app.post('/sendMsg', messageLimiter, async (req, res) => {
+app.post('/api/sendMsg', messageLimiter, async (req, res) => {
     try {
         const { message } = req.body;
         if (!message) {
@@ -48,7 +48,7 @@ app.post('/sendMsg', messageLimiter, async (req, res) => {
     }
 })
 
-app.post("/admin", async (req, res) => {
+app.post("/api/admin", async (req, res) => {
     const { id, password } = req.body;
     const isAdmin = ADMIN_CREDENTIALS.some(cred => cred.id === id && cred.password === password);
     if (isAdmin) {
