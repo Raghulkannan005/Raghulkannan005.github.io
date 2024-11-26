@@ -1,4 +1,4 @@
-import { SiHtml5, SiJavascript, SiReact, SiTailwindcss, SiBootstrap, SiNodedotjs, SiExpress, SiMongodb, SiMysql, SiPython } from "react-icons/si";
+import { SiHtml5, SiJavascript, SiReact, SiTailwindcss, SiBootstrap, SiNodedotjs, SiExpress, SiMongodb,SiGit, SiMysql, SiPython } from "react-icons/si";
 
 const BASE_URL = import.meta.env.BASE_URL;
 
@@ -21,13 +21,14 @@ export const skill = [
     { name: "HTML/CSS", icon: SiHtml5, color: "#E44D26" },
     { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
     { name: "React", icon: SiReact, color: "#61DAFB" },
-    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#38BDF8" },
     { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
     { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
     { name: "Express.js", icon: SiExpress, color: "#000000" },
     { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
     { name: "SQL", icon: SiMysql, color: "#4479A1" },
-    { name: "Python", icon: SiPython, color: "#3776AB" }
+    { name: "Python", icon: SiPython, color: "#3776AB" },
+    { name: "Git", icon: SiGit, color: "#F05032" }
 ];
 
 export const projects = [

@@ -8,8 +8,7 @@ export default {
     extend: {
       animation: {
         fade: 'fadeInOut 1s ease-in-out infinite',
-        darkGradient: 'darkColorGradientChanger 1s ease-in-out infinite',
-        lightGradient: 'lightColorGradientChanger 1s ease-in-out infinite',
+        Gradient: 'darkColorGradientChanger 1s ease-in-out infinite',
       },
       keyframes: {
         fadeInOut: {
@@ -17,18 +16,12 @@ export default {
           '50%': { opacity: 1 },
         },
         darkColorGradientChanger:{
-        '0%': { backgroundImage: 'linear-gradient(to left, #F59E0B, #00FF7F, #FF1493)' },
-        '33%': { backgroundImage: 'linear-gradient(to left, #00FF7F, #FF1493, #F59E0B)' },
-        '66%': { backgroundImage: 'linear-gradient(to left, #FF1493, #F59E0B, #00FF7F)' },
-        '100%': { backgroundImage: 'linear-gradient(to left, #F59E0B, #00FF7F, #FF1493)' }
-        }
-      ,
-      lightColorGradientChanger: {
-        '0%': { backgroundImage: 'linear-gradient(to left, #FFF700, #FF2E7E, #00FFFF)' },
-        '33%': { backgroundImage: 'linear-gradient(to left, #FF2E7E, #00FFFF, #FFF700)' },
-        '66%': { backgroundImage: 'linear-gradient(to left, #00FFFF, #FFF700, #FF2E7E)' },
-        '100%': { backgroundImage: 'linear-gradient(to left, #FFF700, #FF2E7E, #00FFFF)' }
-      }
+          '0%': { backgroundImage: 'linear-gradient(to left, #F59E0B, #00FF7F, #FF1493, #1E90FF, #32CD32)' },
+          '25%': { backgroundImage: 'linear-gradient(to left, #00FF7F, #FF1493, #1E90FF, #32CD32, #F59E0B)' },
+          '50%': { backgroundImage: 'linear-gradient(to left, #FF1493, #1E90FF, #32CD32, #F59E0B, #00FF7F)' },
+          '75%': { backgroundImage: 'linear-gradient(to left, #1E90FF, #32CD32, #F59E0B, #00FF7F, #FF1493)' },
+          '100%': { backgroundImage: 'linear-gradient(to left, #F59E0B, #00FF7F, #FF1493, #1E90FF, #32CD32)' }
+          }
       },
       colors: {
         'darkBlue': '#050536',

@@ -5,7 +5,7 @@ const Contact = () => {
     const { darkMode } = useTheme();
     
     return (
-        <div className={`h-screen w-full flex flex-col justify-center items-center ${darkMode ? 'bg-gradient-to-b from-[#0a192f] to-black' : 'bg-gradient-to-b from-[#86a2ee] to-gray-300'}`} id="contact">
+        <div className={`h-screen w-full flex flex-col justify-center items-center ${darkMode ? 'bg-gradient-to-b from-[#0a192f] to-black' : 'bg-gradient-to-b from-[#86a2ee] to-[#75b7f5]'}`} id="contact">
             <div className={`${darkMode? 'text-white' :'text-black'} text-4xl text-center font-bold mb-4`}>
             Let&apos;s Create Something Amazing Together! 🚀
             </div>

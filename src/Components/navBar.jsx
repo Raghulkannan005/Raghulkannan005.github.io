@@ -27,7 +27,7 @@ const Navbar = () => {
 
     const Btns = (props) => {
         return (
-            <div className={`${darkMode ? 'text-white hover:bg-slate-300' : 'text-gray-900 hover:bg-[#7e92ff]'} font-rubi font-bold text-2xl ml-10 text-center  cursor-pointer hover:scale-110 hover:text-darkBlue rounded-xl p-1 transition duration-300 ease-in-out hover:shadow-md hover:shadow-blue-500`} onClick={navClicked}>{props.navBtns}</div>
+            <div className={`${darkMode ? 'text-white hover:bg-slate-300' : 'text-gray-900 hover:bg-[#95cafc]'} font-rubi font-bold text-2xl ml-10 text-center  cursor-pointer hover:scale-110 hover:text-darkBlue rounded-xl p-1 transition duration-300 ease-in-out hover:shadow-md hover:shadow-blue-500`} onClick={navClicked}>{props.navBtns}</div>
         )
     }
 
@@ -64,7 +64,7 @@ const Navbar = () => {
                             const audio = document.querySelector('audio');
                             {isPlaying ? audio.pause(): audio.play()}
                             setMuted(!isMuted);
-                        }} className="text-white/30 my-4 size-5 hover:text-white hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out">
+                        }} className={` ${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-800 hover:text-gray-300'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out`}>
                         </IoVolumeMute>
                     ): (
                         <IoVolumeMediumSharp onClick={() => {
@@ -73,7 +73,7 @@ const Navbar = () => {
                             setMuted(!isMuted);
                             setPaused(true);
                             setPlaying(false);
-                        }}  className="text-white/30 my-4 size-5 hover:text-white hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out">
+                        }}  className={` ${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-800 hover:text-gray-300'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out`}>
                         </IoVolumeMediumSharp>
                     )  }
                     <GiHamburgerMenu className="sm:hidden text-white/30 my-4 size-5 hover:text-white hover:scale-110 rounded-full h-12 w-12 py-2 transition duration-100 ease-in-out" onClick={toggleClass}></GiHamburgerMenu>
