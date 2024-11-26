@@ -1,16 +1,16 @@
 // backend/index.js
-import express from 'express'
-import db from './db.js'
-import cors from 'cors'
-import rateLimit from 'express-rate-limit'
+import express from 'express';
+import db from './db.js';
+import cors from 'cors';
+import rateLimit from 'express-rate-limit';
 
-const app = express()
+const app = express();
 
 // CORS configuration
 app.use(cors({
     origin: ['https://raghulkannan.vercel.app']
-}))
-app.use(express.json())
+}));
+app.use(express.json());
 
 // Rate limiting configuration
 const messageLimiter = rateLimit({
@@ -18,7 +18,7 @@ const messageLimiter = rateLimit({
     max: 5, // limit each IP to 5 requests per windowMs
     message: 'You have exceeded the 5 messages in 10 min limit!',
     headers: true,
-})
+});
 
 // Admin credentials
 const ADMIN_CREDENTIALS = [
@@ -41,12 +41,11 @@ app.post('/api/sendMsg', messageLimiter, async (req, res) => {
 
         await newMessage.save();
         res.status(200).send('Message saved successfully');
-
     } catch (err) {
         console.error('Server error:', err);
         res.status(500).send(`Error saving message: ${err.message}`);
     }
-})
+});
 
 app.post("/api/admin", async (req, res) => {
     const { id, password } = req.body;
@@ -61,10 +60,10 @@ app.post("/api/admin", async (req, res) => {
     } else {
         res.status(401).send('Unauthorized');
     }
-})
+});
 
 // Port configuration 
-const PORT = 3000
+const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
-})
+    console.log(`Server running on port ${PORT}`);
+});
