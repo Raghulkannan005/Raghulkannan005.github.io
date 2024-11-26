@@ -15,7 +15,7 @@ app.use(express.json());
 // Rate limiting configuration
 const messageLimiter = rateLimit({
     windowMs: 60 * 10 * 1000, // 10 min window
-    max: 5, // limit each IP to 5 requests per windowMs
+    max: 100, // limit each IP to 5 requests per windowMs
     message: 'You have exceeded the 5 messages in 10 min limit!',
     headers: true,
 });
@@ -62,7 +62,7 @@ app.post("/api/admin", async (req, res) => {
     }
 });
 
-// Port configuration 
+// Port configuration
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
