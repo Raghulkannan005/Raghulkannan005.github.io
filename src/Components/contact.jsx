@@ -14,7 +14,7 @@ const Contact = () => {
         setStatus('');
         
         try {
-            const response = await fetch('https://raghulkannan.vercel.app/api/sendMsg', {
+            const response = await fetch('https://raghulkannan.vercel.app/sendMsg', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
