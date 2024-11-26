@@ -15,8 +15,8 @@ app.use(express.json());
 // Rate limiting configuration
 const messageLimiter = rateLimit({
     windowMs: 60 * 10 * 1000, // 10 min window
-    max: 100, // limit each IP to 5 requests per windowMs
-    message: 'You have exceeded the 5 messages in 10 min limit!',
+    max: 100, // limit each IP to 100 requests per windowMs
+    message: 'You have exceeded the 100 messages in 10 min limit!',
     headers: true,
 });
 
@@ -26,7 +26,7 @@ const ADMIN_CREDENTIALS = [
     { id: 'praisha', password: 'raghuletta' } 
 ];
 
-// Apply the rate limiting middleware to the /sendMsg endpoint
+// Apply the rate limiting middleware to the /api/sendMsg endpoint
 app.post('/api/sendMsg', messageLimiter, async (req, res) => {
     try {
         const { message } = req.body;
