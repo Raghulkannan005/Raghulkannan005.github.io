@@ -1,13 +1,16 @@
 import express from 'express';
-import db from './db.js';
+import db from './db';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
+
+require('dotenv').config();
 
 const app = express();
 
 // CORS configuration
 app.use(cors({
-    origin: ['https://raghulkannan.vercel.app', "http://localhost:5173"],
+    origin: [`${process.env.FRONTEND_API_URL}`],
+    methods: ['POST']
 }));
 app.use(express.json());
 
