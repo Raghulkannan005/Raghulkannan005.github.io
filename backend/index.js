@@ -8,12 +8,13 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-    origin: ['https://raghulkannan.vercel.app']  // Make sure this is correct
+    origin: ['https://raghulkannan.vercel.app']
 }));
-
 app.use(express.json());
+
+// Serve static files
 app.use(express.static('dist', {
-    extensions: ['html', 'js'], // Ensure correct extensions
+    extensions: ['html', 'js'],
     setHeaders: (res, path) => {
         if (path.endsWith('.js')) {
             res.setHeader('Content-Type', 'application/javascript');
@@ -57,7 +58,6 @@ app.post('/api/sendMsg', messageLimiter, async (req, res) => {
 });
 
 app.post("/api/admin", async (req, res) => {
-    console.log("Received admin request", req.body);  // Add this log for debugging
     const { id, password } = req.body;
     const isAdmin = ADMIN_CREDENTIALS.some(cred => cred.id === id && cred.password === password);
     if (isAdmin) {
