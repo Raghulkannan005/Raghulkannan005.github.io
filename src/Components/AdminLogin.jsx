@@ -11,7 +11,7 @@ const AdminLogin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const apiUrl = "https://raghulkannan-4nf6tc4fo-raghulkannan005s-projects.vercel.app/api/sendMsg";
+        const apiUrl = "https://raghulkannan.vercel.app/api/admin";
 
         try {
             const response = await fetch(apiUrl, {
