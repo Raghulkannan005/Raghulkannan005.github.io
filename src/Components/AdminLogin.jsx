@@ -1,6 +1,5 @@
 // src/Components/AdminLogin.jsx
 import { useState } from 'react';
-import axios from 'axios';
 import moment from 'moment';
 
 const AdminLogin = () => {
@@ -12,13 +11,24 @@ const AdminLogin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-
-        const apiUrl = "https://raghulkannan.vercel.app/api/sendMsg";
+        const apiUrl = "https://raghulkannan.vercel.app/api/admin";
 
         try {
-            const response = await axios.post(apiUrl, { id, password });
-            setMessages(response.data);
-            setError('');
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ id, password })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                setMessages(data);
+                setError('');
+            } else {
+                throw new Error('Unauthorized or error fetching messages');
+            }
         } catch (err) {
             setError('Unauthorized or error fetching messages');
             console.log(err);

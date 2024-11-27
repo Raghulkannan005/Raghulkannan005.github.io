@@ -2,15 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "backend/index.js",
+      "src": "api/sendMsg.js",
       "use": "@vercel/node"
     },
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+      "src": "api/admin.js",
+      "use": "@vercel/node"
     }
   ],
   "rewrites": [

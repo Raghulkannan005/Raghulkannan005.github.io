@@ -14,15 +14,15 @@ const Contact = () => {
         setStatus('');
 
         const apiUrl = "https://raghulkannan.vercel.app/api/sendMsg";
-        
+
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ 
-                    message: e.target.message.value 
+                body: JSON.stringify({
+                    message: e.target.message.value
                 })
             });
 

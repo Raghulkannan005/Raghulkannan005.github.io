@@ -11,16 +11,6 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// Serve static files
-app.use(express.static('dist', {
-    extensions: ['html', 'js'],
-    setHeaders: (res, path) => {
-        if (path.endsWith('.js')) {
-            res.setHeader('Content-Type', 'application/javascript');
-        }
-    },
-}));
-
 // Rate limiting configuration
 const messageLimiter = rateLimit({
     windowMs: 60 * 10 * 1000, // 10 min window
@@ -29,13 +19,11 @@ const messageLimiter = rateLimit({
     headers: true,
 });
 
-// Admin credentials
 const ADMIN_CREDENTIALS = [
-    { id: 'raghul', password: 'praishathango' },
-    { id: 'praisha', password: 'raghuletta' } 
+    { id: 'raghul', password: 'praisha' },
+    { id: 'praisha', password: 'raghul' } 
 ];
 
-// Apply the rate limiting middleware to the /api/sendMsg endpoint
 app.post('/api/sendMsg', messageLimiter, async (req, res) => {
     try {
         const { message } = req.body;
@@ -43,9 +31,8 @@ app.post('/api/sendMsg', messageLimiter, async (req, res) => {
             return res.status(400).send('Message is required');
         }
 
-        // Create new message with correct schema field name
         const newMessage = new db.Message({
-            Message: message // Capitalize M to match schema
+            Message: message
         });
 
         await newMessage.save();
