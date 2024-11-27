@@ -1,4 +1,3 @@
-// backend/index.js
 import express from 'express';
 import db from './db.js';
 import cors from 'cors';
@@ -8,7 +7,7 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-    origin: ['https://raghulkannan.vercel.app']
+    origin: ['https://raghulkannan.vercel.app', 'http://localhost:5173']
 }));
 app.use(express.json());
 
@@ -73,7 +72,7 @@ app.post("/api/admin", async (req, res) => {
 });
 
 // Port configuration
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

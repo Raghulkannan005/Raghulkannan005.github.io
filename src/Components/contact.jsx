@@ -12,9 +12,13 @@ const Contact = () => {
         e.preventDefault();
         setIsLoading(true);
         setStatus('');
+
+        const apiUrl = process.env.NODE_ENV === 'production' 
+            ? 'https://raghulkannan.vercel.app/api/sendMsg' 
+            : 'http://localhost:3000/api/sendMsg';
         
         try {
-            const response = await fetch('https://raghulkannan.vercel.app/api/sendMsg', {
+            const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
