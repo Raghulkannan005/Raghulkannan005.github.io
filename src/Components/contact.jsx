@@ -13,7 +13,7 @@ const Contact = () => {
         setIsLoading(true);
         setStatus('');
 
-        const apiUrl = `${import.meta.env.VITE_BACKEND_API_URL}/api/sendMsg`;
+        const apiUrl = "https://raghulkannan-backend.vercel.app/api/sendMsg";
 
 
         try {

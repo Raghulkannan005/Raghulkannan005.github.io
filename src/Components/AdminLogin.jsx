@@ -12,7 +12,7 @@ const AdminLogin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const apiUrl = `${import.meta.env.VITE_BACKEND_API_URL}/api/admin`;
+        const apiUrl = "https://raghulkannan-backend.vercel.app/api/admin";
 
         try {
             const response = await fetch(apiUrl, {
