@@ -7,7 +7,7 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-    origin: ['https://raghulkannan.vercel.app']
+    origin: ['https://raghulkannan.vercel.app', "http://localhost:5173"],
 }));
 app.use(express.json());
 
