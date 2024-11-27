@@ -13,7 +13,7 @@ const Contact = () => {
         setIsLoading(true);
         setStatus('');
 
-        const apiUrl = "https://raghulkannan.vercel.app/api/sendMsg";
+        const apiUrl = "https://raghulkannan-4nf6tc4fo-raghulkannan005s-projects.vercel.app/api/sendMsg";
 
         try {
             const response = await fetch(apiUrl, {

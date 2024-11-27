@@ -7,7 +7,7 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-    origin: ['https://raghulkannan.vercel.app', 'http://localhost:5173']
+    origin: ['https://raghulkannan.vercel.app', 'https://raghulkannan-git-main-raghulkannan005s-projects.vercel.app','https://raghulkannan-4nf6tc4fo-raghulkannan005s-projects.vercel.app','http://localhost:5173']
 }));
 app.use(express.json());
 
