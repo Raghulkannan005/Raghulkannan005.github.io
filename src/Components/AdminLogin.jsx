@@ -37,7 +37,7 @@ const AdminLogin = () => {
     };
 
     return (
-        <div className="h-screen w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#86a2ee] to-[#75b7f5]">
+        <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-b from-[#86a2ee] to-[#75b7f5]">
             <h2 className="text-4xl font-bold mb-4">Admin Login</h2>
             {!messages.length > 0 && (
                 <form onSubmit={handleSubmit} className="flex flex-col items-center">

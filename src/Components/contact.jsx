@@ -1,7 +1,8 @@
 // src/Components/contact.jsx
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { HiOutlineMail } from "react-icons/hi";
 import { useTheme } from '../context/ThemeContext';
+import axios from 'axios';
 
 const Contact = () => {
     const { darkMode } = useTheme();
@@ -14,6 +15,7 @@ const Contact = () => {
         setStatus('');
 
         const apiUrl = "https://raghulkannan.vercel.app/api/sendMsg";
+
 
         try {
             const response = await fetch(apiUrl, {
