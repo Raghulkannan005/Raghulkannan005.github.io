@@ -1,9 +1,10 @@
 import express from 'express';
-import db from './db';
+import db from './db.js';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
+import dotenv from 'dotenv';
 
-require('dotenv').config();
+dotenv.config();
 
 const app = express();
 
@@ -21,11 +22,6 @@ const messageLimiter = rateLimit({
     message: 'You have exceeded the 100 messages in 10 min limit!',
     headers: true,
 });
-
-const ADMIN_CREDENTIALS = [
-    { id: 'raghul', password: 'praisha' },
-    { id: 'praisha', password: 'raghul' } 
-];
 
 app.post('/api/sendMsg', messageLimiter, async (req, res) => {
     try {
@@ -45,6 +41,11 @@ app.post('/api/sendMsg', messageLimiter, async (req, res) => {
         res.status(500).send(`Error saving message: ${err.message}`);
     }
 });
+
+const ADMIN_CREDENTIALS = [
+    { id: process.env.USER1_ID, password: process.env.USER1_PASSWORD },
+    { id: process.env.USER2_ID, password: process.env.USER2_PASSWORD }
+];
 
 app.post("/api/admin", async (req, res) => {
     const { id, password } = req.body;

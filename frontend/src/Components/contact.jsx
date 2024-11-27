@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import { HiOutlineMail } from "react-icons/hi";
 import { useTheme } from '../context/ThemeContext';
-import axios from 'axios';
 
 const Contact = () => {
     const { darkMode } = useTheme();
@@ -14,7 +13,7 @@ const Contact = () => {
         setIsLoading(true);
         setStatus('');
 
-        const apiUrl = "https://raghulkannan.vercel.app/api/sendMsg";
+        const apiUrl = `${import.meta.env.VITE_BACKEND_API_URL}/api/sendMsg`;
 
 
         try {

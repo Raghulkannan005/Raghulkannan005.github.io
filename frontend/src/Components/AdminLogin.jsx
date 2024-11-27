@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import moment from 'moment';
 
+
 const AdminLogin = () => {
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
@@ -11,7 +12,7 @@ const AdminLogin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const apiUrl = "https://raghulkannan.vercel.app/api/admin";
+        const apiUrl = `${import.meta.env.VITE_BACKEND_API_URL}/api/admin`;
 
         try {
             const response = await fetch(apiUrl, {
