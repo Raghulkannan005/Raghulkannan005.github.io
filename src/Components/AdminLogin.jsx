@@ -70,7 +70,7 @@ const AdminLogin = () => {
             {messages.length > 0 && (
                 <div className="mt-8 w-full max-w-2xl px-4">
                     <h3 className="text-2xl font-bold mb-4">Messages</h3>
-                    <ul className="space-y-4">
+                    <ul className="space-y-4 flex flex-col-reverse">
                         {messages.map((message, index) => (
                             <li key={index} className="p-4 border rounded-lg bg-white shadow-md">
                                 <p className="text-lg font-semibold">{message.Message}</p>
