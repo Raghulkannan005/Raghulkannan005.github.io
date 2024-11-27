@@ -12,9 +12,8 @@ const AdminLogin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const apiUrl = process.env.NODE_ENV === 'production' 
-            ? 'https://raghulkannan.vercel.app/api/admin' 
-            : 'http://localhost:3000/api/admin';
+
+        const apiUrl = "https://raghulkannan.vercel.app/api/sendMsg";
 
         try {
             const response = await axios.post(apiUrl, { id, password });
