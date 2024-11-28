@@ -72,7 +72,7 @@ const AdminLogin = () => {
                     <h3 className="text-2xl font-bold mb-4">Messages</h3>
                     <ul className="space-y-4 flex flex-col-reverse">
                         {messages.map((message, index) => (
-                            <li key={index} className="p-4 border rounded-lg bg-white shadow-md">
+                            <li key={index} className="p-4 border rounded-lg m-2 bg-white shadow-md">
                                 <p className="text-lg font-semibold">{message.Message}</p>
                                 <p className="text-sm text-gray-500">
                                     {moment(message.createdAt).format('DD MMMM YYYY, h:mm:ss a')}
