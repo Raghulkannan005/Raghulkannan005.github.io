@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react';
 
 
 export default defineConfig({
-  base: '/', //while uploading to git replace '/' with '/Raghulkannan005.github.io/'
+  base: '/Raghulkannan005.github.io/', //while uploading to git replace '/' with '/Raghulkannan005.github.io/'
   plugins: [react()],
   build: {
     outDir: 'dist',
@@ -30,3 +30,4 @@ export default defineConfig({
     'process.env': process.env
   }
 });
+
