@@ -15,14 +15,19 @@ const AppContent = () => {
     const toggleClass = () => {
         setActive(!isActive);
     };
+    const onlyIfOpenToggle = () => {
+        if(isActive == true){
+            toggleClass();
+        }
+    }
 
     return (
-        <div className={`h-full w-full min-w-96 items-center transition-colors duration-300 ${darkMode ? '[background:radial-gradient(125%_125%_at_50%_10%,#020220_30%,#0a1399_100%)]' : 'bg-gray-100'}`}>
+        <div className={`h-full w-full min-w-[375px] items-center transition-colors duration-300 ${darkMode ? '[background:radial-gradient(125%_125%_at_50%_10%,#020220_30%,#0a1399_100%)]' : 'bg-gray-100'}`}>
             <Navbar isActive={isActive} toggleClass={toggleClass} />
-            <Hero toggleClass={toggleClass} />
-            <About toggleClass={toggleClass} />
-            <Projects toggleClass={toggleClass} />
-            <Contact toggleClass={toggleClass} />
+            <Hero onlyIfOpenToggle={onlyIfOpenToggle} />
+            <About onlyIfOpenToggle={onlyIfOpenToggle} />
+            <Projects onlyIfOpenToggle={onlyIfOpenToggle} />
+            <Contact onlyIfOpenToggle={onlyIfOpenToggle} />
         </div>
     );
 };

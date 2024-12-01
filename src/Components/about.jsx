@@ -1,10 +1,10 @@
 import { skill } from "./constants.js";
 import { useTheme } from '../context/ThemeContext';
 
-const About = () => {
+const About = ({onlyIfOpenToggle}) => {
     const { darkMode } = useTheme();
     return (
-        <div className={`min-h-screen w-full p-4 flex flex-col justify-center items-center ${darkMode ? 'bg-gradient-to-b from-[#000328] to-[#014449]' : 'bg-gradient-to-b from-[#657cff] to-[#98d4d8]'}`} id="about">
+        <div onClick={onlyIfOpenToggle} className={`min-h-screen w-full p-4 flex flex-col justify-center items-center ${darkMode ? 'bg-gradient-to-b from-[#000328] to-[#014449]' : 'bg-gradient-to-b from-[#657cff] to-[#98d4d8]'}`} id="about">
             <p className={`${darkMode ? 'text-gray-300' : 'text-gray-800'} font-rubi text-xl text-center mt-20 mb-8`}>
                 Technologies and tools I&apos;ve worked with
             </p>

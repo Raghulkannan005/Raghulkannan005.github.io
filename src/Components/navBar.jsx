@@ -40,7 +40,7 @@ const Navbar = ({ isActive, toggleClass }) => {
                     <Link to="projects" smooth={true} duration={500}><Btns navBtns="Project" /></Link>
                     <Link to="contact" smooth={true} duration={500}><Btns navBtns="Contact" /></Link>
                 </div>
-                <div className={`sm:hidden ${isActive ? 'flex' : 'hidden'} flex-col fixed top-20 right-0 ${darkMode ? 'bg-black/85 ' : 'bg-gray-300/30'} pr-8 gap-2 rounded-b-xl pb-8`}>
+                <div className={`sm:hidden ${isActive ? 'flex' : 'hidden'} flex-col fixed top-20 right-0 ${darkMode ? 'bg-black/50 ' : 'bg-gray-300/30'} pr-8 gap-2 rounded-b-xl pb-8`}>
                     <Link to="hero" smooth={true} duration={500}> <Btns navBtns="Home" />  </Link>
                     <Link to="about" smooth={true} duration={500}> <Btns navBtns="About" />  </Link>
                     <Link to="projects" smooth={true} duration={500}> <Btns navBtns="Project" />  </Link>
@@ -48,7 +48,7 @@ const Navbar = ({ isActive, toggleClass }) => {
                 </div>
                 <h1 className={` ${darkMode ? 'text-white ' : 'text-black '} sm:hidden mx-5 font-signi font-bold text-3xl`}>Portfolio</h1>
                 <div className="flex">
-                    <BiAdjust 
+                    <BiAdjust
                         onClick={toggleTheme}
                         className={`${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-600 hover:text-gray-300'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out cursor-pointer`} 
                     />

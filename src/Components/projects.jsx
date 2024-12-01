@@ -1,10 +1,10 @@
 import {projects} from './constants.js';
 import { useTheme } from '../context/ThemeContext';
 
-const Projects = () => {
+const Projects = ({onlyIfOpenToggle}) => {
 	const { darkMode } = useTheme();
 return (
-	<div className={`w-full min-h-screen p-8 pt-24 ${darkMode? 'bg-gradient-to-b from-[#014449] to-[#0a192f]' :'bg-gradient-to-b from-[#98d4d8] to-[#86a2ee]'}`}id="projects">
+	<div onClick={onlyIfOpenToggle} className={`w-full min-h-screen p-8 pt-24 ${darkMode? 'bg-gradient-to-b from-[#014449] to-[#0a192f]' :'bg-gradient-to-b from-[#98d4d8] to-[#86a2ee]'}`}id="projects">
 		<div className="max-w-6xl mx-auto">
 			<h2 className={`text-3xl font-bold text-center ${darkMode? 'text-white' :'text-black'} mb-4`}>PROJECTS</h2>
 			<p className={`${darkMode? 'text-gray-300' :'text-slate-950'} text-xl text-center mb-8`}>

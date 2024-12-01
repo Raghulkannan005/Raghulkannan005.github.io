@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { HiOutlineMail } from "react-icons/hi";
 import { useTheme } from '../context/ThemeContext';
 
-const Contact = () => {
+const Contact = ({onlyIfOpenToggle}) => {
     const { darkMode } = useTheme();
     const [isLoading, setIsLoading] = useState(false);
     const [status, setStatus] = useState('');
@@ -46,7 +46,7 @@ const Contact = () => {
 
     return (
 
-    <div className={`min-h-screen relative w-full flex flex-col justify-text-white items-center ${darkMode ? 'bg-gradient-to-b from-[#0a192f] to-black' : 'bg-gradient-to-b from-[#86a2ee] to-[#75b7f5]'}`} id="contact" >
+    <div onClick={onlyIfOpenToggle} className={`min-h-screen relative w-full flex flex-col justify-text-white items-center ${darkMode ? 'bg-gradient-to-b from-[#0a192f] to-black' : 'bg-gradient-to-b from-[#86a2ee] to-[#75b7f5]'}`} id="contact" >
 
         <div className='flex flex-col min-h-[90vh] justify-center items-center'>
 
