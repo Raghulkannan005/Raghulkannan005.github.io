@@ -1,18 +1,25 @@
+import { useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
+
 const Hero = () => {
     const { darkMode } = useTheme();
     const BASE_URL = import.meta.env.BASE_URL;
 
+    useEffect(() => {
+        const audioElement = document.getElementById('background-audio');
+        if (audioElement) {
+            audioElement.volume = 0.2; // Set default volume to 0.3
+        }
+    }, []);
+
     return (
-        <div className={`h-screen w-full z-40 flex flex-wrap ${darkMode ? 'bg-gradient-to-b from-[#010308] to-[#000328]' : 'bg-gradient-to-b from-[#7bbfff] to-[#657cff]'}`} id="hero">
-            <audio controls autoPlay loop className="mt-20 hidden">
+        <div className={`h-screen z-40 flex flex-wrap ${darkMode ? 'bg-gradient-to-b from-[#010308] to-[#000328]' : 'bg-gradient-to-b from-[#7bbfff] to-[#657cff]'}`} id="hero">
+            <audio id="background-audio" controls autoPlay loop className="mt-20 hidden">
                 <source src={`${BASE_URL}Media/greenTeaForest.mp3`} type="audio/mp3" />
             </audio>
 
             <div className={`${darkMode ? 'text-white' : 'text-gray-800'} font-bold font-signi w-full flex flex-col justify-center items-center mt-32 lg:w-1/2 lg:mt-0`}>
-
                 <span className={`animate-Gradient z-40 bg-clip-text text-5xl text-transparent text-center xs:h-[70px] lg:text-start w-3/4`}>Raghul Kannan</span>
-
                 <span className="font-signi text-yellow-500 sm:mt-0 text-lg m-4 lg:text-start text-center w-3/4">CODE CRAFTSMAN</span>
                 <span className={`font-rubi ${darkMode ? 'text-white/40' : 'text-black/60'} text-lg m-4 lg:text-start text-center w-3/4`}>
                     Specialized In Full Stack Development Who Makes People&apos;s Life Easier By Creating Magical Websites.

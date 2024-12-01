@@ -12,7 +12,7 @@ return (
 			</p>
 			<div className="flex flex-wrap justify-center mx-auto w-9/10 gap-6">
 				{projects.map((project, index) => (
-					<div key={index} className="bg-gray-800 max-w-[300px] rounded-lg overflow-hidden">
+					<div key={index} className="bg-gray-800 max-w-[280px] rounded-lg overflow-hidden">
 						<a href={project.link} target="_blank" className="block" rel="noopener noreferrer" aria-label={`View ${project.name} project`}>
 							<img src={project.image} alt={project.alt} className="w-full h-48 object-cover" />
 						</a>
