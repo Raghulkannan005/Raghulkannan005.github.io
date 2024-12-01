@@ -8,7 +8,7 @@
     "dev": "vite",
     "preview": "vite preview",
     "build": "vite build && cp dist/index.html dist/404.html",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",

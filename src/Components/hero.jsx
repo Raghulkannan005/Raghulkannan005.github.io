@@ -13,7 +13,7 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className={`h-screen z-40 flex flex-wrap ${darkMode ? 'bg-gradient-to-b from-[#010308] to-[#000328]' : 'bg-gradient-to-b from-[#7bbfff] to-[#657cff]'}`} id="hero">
+        <div className={`min-h-screen pt-4 z-40 flex flex-wrap ${darkMode ? 'bg-gradient-to-b from-[#010308] to-[#000328]' : 'bg-gradient-to-b from-[#7bbfff] to-[#657cff]'}`} id="hero">
             <audio id="background-audio" controls autoPlay loop className="mt-20 hidden">
                 <source src={`${BASE_URL}Media/greenTeaForest.mp3`} type="audio/mp3" />
             </audio>

@@ -50,15 +50,15 @@ const Contact = () => {
 
         <div className='flex flex-col min-h-[90vh] justify-center items-center'>
 
-            <div className= "text-yellow-300 text-2xl sm:text-4xl font-signi mt-12 px-6 text-center font-bold mb-4">
+            <div className= "text-yellow-300 text-3xl sm:text-4xl font-signi mt-28 px-6 text-center font-bold mb-4">
                 Let&apos;s Create Something Amazing Together! 🚀
             </div>
 
-            <div className={` ${darkMode? 'text-white' :'text-black'} sm:text-lg font-signi max-w-2xl font-light text-center px-5`}>
+            <div className={` ${darkMode? 'text-white' :'text-black'} sm:text-lg font-signi max-w-2xl font-light text-center pt-6 px-8`}>
                 Ready to turn your innovative ideas into reality? I&apos;m here to help!
             </div>
 
-            <div className={` ${darkMode? 'text-white' :'text-black'} text-base sm:text-lg font-signi max-w-2xl font-light text-center px-5`}>
+            <div className={` ${darkMode? 'text-white' :'text-black'} text-base sm:text-lg font-signi max-w-2xl font-light text-center px-8`}>
                 Don&apos;t miss out - Reach out now and lets build something Extraordinary! ✨
             </div>
 
@@ -100,7 +100,7 @@ const Contact = () => {
                 </form>
             </div>
         </div>
-            <footer className={` ${darkMode?'bg-black/60':'bg-white/10'} w-full h-[10%] flex flex-col items-center`}>
+            <footer className={` ${darkMode?'bg-black/60':'bg-white/10'} w-full h-[5%] flex flex-col items-center`}>
                 <div className={`text-xl ${darkMode ? 'text-white' : 'text-black'} font-rubi mt-2 flex items-center`}>
                 <a href="https://github.com/Raghulkannan005" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-gray-400 m-2">
                         <svg height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true" fill="currentColor">
