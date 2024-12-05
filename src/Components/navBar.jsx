@@ -23,7 +23,7 @@ const Navbar = ({ isActive, toggleClass }) => {
 
     const Btns = (props) => {
         return (
-            <div className={`${darkMode ? 'text-white hover:bg-slate-300' : 'text-gray-900 hover:bg-[#95cafc]'} font-rubi font-bold text-2xl ml-10 text-center cursor-pointer hover:scale-110 hover:text-darkBlue rounded-xl p-1 transition duration-300 ease-in-out hover:shadow-md hover:shadow-blue-500`} onClick={navClicked}>{props.navBtns}</div>
+            <div className={`${darkMode ? 'text-white hover:bg-slate-200' : 'text-gray-900 hover:bg-[#95cafc]'} font-rubi font-bold text-2xl ml-10 text-center cursor-pointer hover:scale-110 hover:text-darkBlue rounded-lg p-1 transition duration-100 ease-in-out hover:shadow-md hover:shadow-blue-500`} onClick={navClicked}>{props.navBtns}</div>
         );
     };
 

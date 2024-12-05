@@ -50,15 +50,15 @@ const Contact = ({onlyIfOpenToggle}) => {
 
         <div className='flex flex-col min-h-[90vh] justify-center items-center'>
 
-            <div className= "text-yellow-300 text-3xl sm:text-4xl font-signi mt-24 px-6 text-center font-bold mb-4">
-                Let&apos;s Create Something Amazing Together! 🚀
+            <div className= "text-yellow-300 text-3xl sm:text-4xl font-signi mt-24 px-6 text-center font-bold mb-4 cursor-default">
+                Let&apos;s Create Something Amazing Together! <span className="hover:rotate-180 duratio-75">🚀</span>
             </div>
 
-            <div className={` ${darkMode? 'text-white' :'text-black'} sm:text-lg font-signi max-w-2xl font-light text-center pt-6 px-8`}>
+            <div className={` ${darkMode? 'text-white' :'text-black'} sm:text-lg font-signi max-w-2xl font-light text-center pt-6 px-8 cursor-default`}>
                 Ready to turn your innovative ideas into reality? I&apos;m here to help!
             </div>
 
-            <div className={` ${darkMode? 'text-white' :'text-black'} text-base sm:text-lg font-signi max-w-2xl font-light text-center px-8`}>
+            <div className={` ${darkMode? 'text-white' :'text-black'} text-base sm:text-lg font-signi max-w-2xl font-light text-center px-8 cursor-copy`}>
                 Don&apos;t miss out - Reach out now and lets build something Extraordinary! ✨
             </div>
 
@@ -85,10 +85,10 @@ const Contact = ({onlyIfOpenToggle}) => {
                     <button
                         type="submit"
                         disabled={isLoading}
-                        className={`p-3 rounded-lg text-white hover:scale-105 m-2 duration-200 ${
+                        className={`p-3 rounded-lg text-white hover:scale-105 m-2 duration-75 ${
                             darkMode ? 'bg-gradient-to-r w-2/5 from-cyan-500 to-blue-500'
                             : 'bg-gradient-to-r w-2/5 from-cyan-700 to-blue-700'
-                        } ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        } ${isLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-crosshair'}`}
                     >
                         {isLoading ? 'Sending...' : 'Send Message'}
                     </button>
@@ -123,7 +123,7 @@ const Contact = ({onlyIfOpenToggle}) => {
                 </div>
                 <div className="mt-8 ">
                     <a href="/admin" target="_blank" >
-                        <button className="px-6 py-3 rounded-3xl text-white bg-red-700 hover:scale-105 duration-200">Admin</button>
+                        <button className="px-6 py-3 rounded-3xl text-white bg-red-700 hover:scale-105 duration-100">Admin</button>
                     </a>
                 </div>
             </footer>
