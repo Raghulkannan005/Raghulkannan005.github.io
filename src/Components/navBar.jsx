@@ -32,15 +32,15 @@ const Navbar = ({ isActive, toggleClass }) => {
     };
 
     return (
-        <nav className={`backdrop-blur-lg ${darkMode ? 'bg-black/40' : 'bg-white/10 '} flex items-center justify-center py-4 px-2 z-50 top-0 w-full fixed`}>
-            <div className="flex justify-between items-center h-12 w-full">
-                <div className="hidden sm:h-full sm:justify-center sm:items-center sm:flex-wrap sm:w-full sm:flex">
+        <nav className={`backdrop-blur-lg ${darkMode ? 'bg-black/40' : 'bg-white/10 '} flex items-center justify-center py-4 z-50 top-0 w-full fixed`}>
+            <div className="flex justify-between items-center h-12 ">
+                <div className="hidden sm:h-full sm:justify-center sm:items-center sm:flex-wrap sm:w-full sm:flex ">
                     <Link to="hero" smooth={true} duration={500}><Btns navBtns="Home" /></Link>
                     <Link to="about" smooth={true} duration={500}><Btns navBtns="About" /></Link>
                     <Link to="projects" smooth={true} duration={500}><Btns navBtns="Project" /></Link>
                     <Link to="contact" smooth={true} duration={500}><Btns navBtns="Contact" /></Link>
                 </div>
-                <div className={`sm:hidden ${isActive ? 'flex' : 'hidden'} flex-col fixed top-20 right-0 ${darkMode ? 'bg-black/50 ' : 'bg-gray-300/30'} pr-8 gap-2 rounded-b-xl pb-8`}>
+                <div className={`sm:hidden ${isActive ? 'flex' : 'hidden'} flex-col fixed top-20  right-0 ${darkMode ? 'bg-black/50 ' : 'bg-gray-300/30'} pr-8 gap-2 rounded-b-xl pb-8`}>
                     <Link to="hero" smooth={true} duration={500}> <Btns navBtns="Home" />  </Link>
                     <Link to="about" smooth={true} duration={500}> <Btns navBtns="About" />  </Link>
                     <Link to="projects" smooth={true} duration={500}> <Btns navBtns="Project" />  </Link>
