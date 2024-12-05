@@ -33,7 +33,7 @@ const Navbar = ({ isActive, toggleClass }) => {
 
     return (
         <nav className={`backdrop-blur-lg ${darkMode ? 'bg-black/40' : 'bg-white/10 '} flex items-center justify-center py-4 z-50 top-0 w-full fixed`}>
-            <div className="flex justify-between items-center h-12 ">
+            <div className="flex justify-between items-center h-12 w-full">
                 <div className="hidden sm:h-full sm:justify-center sm:items-center sm:flex-wrap sm:w-full sm:flex ">
                     <Link to="hero" smooth={true} duration={500}><Btns navBtns="Home" /></Link>
                     <Link to="about" smooth={true} duration={500}><Btns navBtns="About" /></Link>
@@ -47,7 +47,7 @@ const Navbar = ({ isActive, toggleClass }) => {
                     <Link to="contact" smooth={true} duration={500}> <Btns navBtns="Contact" />  </Link>
                 </div>
                 <h1 className={` ${darkMode ? 'text-white ' : 'text-black '} sm:hidden mx-5 font-signi font-bold text-3xl`}>Portfolio</h1>
-                <div className="flex">
+                <div className="flex ">
                     <BiAdjust
                         onClick={toggleTheme}
                         className={`${darkMode ? 'text-white/30 hover:text-white' : 'text-gray-600 hover:text-gray-300'} my-4 size-5 hover:scale-110 rounded-full h-12 w-12 py-3 transition duration-100 ease-in-out cursor-pointer`} 
