@@ -26,7 +26,7 @@ const Hero = ({onlyIfOpenToggle}) => {
                 </span>
             </div>
             <div className="flex justify-center items-center w-full lg:w-1/2">
-                <img src="/Raghulkannan005.github.io/Media/Raghul/rag-3.jpg" alt="Raghul's Image" className={` ${darkMode?'hover:bg-slate-300':'hover:bg-[#121a3b]'} hover:shadow-md hover:scale-105 transition duration-300 ease-in-out hover:shadow-blue-500 sm:h-64 h-52 rounded-xl`} loading="lazy"/>
+                <img src="/Media/Raghul/rag-3.jpg" alt="Raghul's Image" className={` ${darkMode?'hover:bg-slate-300':'hover:bg-[#121a3b]'} hover:shadow-md hover:scale-105 transition duration-300 ease-in-out hover:shadow-blue-500 sm:h-64 h-52 rounded-xl`} loading="lazy"/>
             </div>
         </main>
     );
